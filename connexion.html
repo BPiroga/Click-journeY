@@ -2,28 +2,29 @@
 <html lang="fr">
 
 <head>
-    <title>Formulaire Inscription</title>
+    <title> CY Portugal connexion</title>
 </head>
-
-<body>
-    <table border="1" align="center" cellpadding="5" cellspacing="0">
-        <tr>
-            <td colspan="2" align="center">Connexion</td>
-        </tr>
-        <tr>
-            <td>Adresse mail :</td>
-            <td> <input type="email" name="email" placeholder="Entrer votre adresse mail" required></td>
-        </tr>
-        <tr>
-            <td>Code :</td>
-            <td><input type="code" name="code" placeholder="Entrer votre code" required></td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center"> 
-                <button type="submit"> Soumettre ✔</button>
-            </td>
-        </tr>
-    </table>
-    <th>rajouter peut-être l'option mot de passe oublié </peut-></th>
-</body>
+<form type="traitement_connexion.php" method="post">
+    <body>
+        <table border="1" align="center" cellpadding="5" cellspacing="0">
+            <tr>
+                <td colspan="2" align="center">Connexion</td>
+            </tr>
+            <tr>
+                <td>Adresse mail :</td>
+                <td> <input type="email" name="email" placeholder="Entrer votre adresse mail" required></td>
+            </tr>
+            <tr>
+                <td>Code :</td>
+                <td><input type="password" name="code" placeholder="Entrer votre code" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"> 
+                    <button type="submit">SE CONNECTER</button> <button type="reset">EFFACER</button>
+                </td>
+            </tr>
+        </table>
+        <th>rajouter peut-être l'option mot de passe oublié </peut-></th>
+    </body>
+</form>
 </html>
