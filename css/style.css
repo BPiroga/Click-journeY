@@ -34,18 +34,24 @@ body {
     margin-right: 20px;
 }
 
+.navlinks {
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
 .navlinks a {
     border: 3px solid #D9851E;
     padding: 8px;
     background-color: #048ABF;
     border-radius: 8px;
+    transition: 0.3s;
 }
 
-.loginbtn {
-    border: 3px solid #D9851E;
-    padding: 8px;
-    background-color: #048ABF;
-    border-radius: 8px;
+.navlinks a:hover {
+    background-color: #034C8C;
+    transform: scale(1.1);
 }
 
 .container {
@@ -71,6 +77,7 @@ body {
     overflow: scroll;
     scroll-snap-type: x mandatory;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 .offres > div {
