@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>CY Portugal</title>
 </head>
 <body>
-    
+    <header class="navbar">
+        <a href="index.html"><img src="src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
+        <p class="titre">CY Portugal</p>
+        <div class="navlinks">
+            <a href="presentation.html">Présentation</a>
+            <a href="search.html">Recherche</a>
+            <a href="connexion.html" class="loginbtn">Se connecter</a>
+        </div>
+    </header>
+    <!--
     <input type="text" name="recherche" placeholder="rechercher">
     <label for="start">Beginning:</label>
     <input type="date" id="start" name="datestart" min="2025-02-07" max="2030-11-11" >
     <label for="end">ending:</label>
     <input type="date" id="end" name="dateend" min="2025-02-07" max="2030-11-11" >
+    <input type="checkbox">
     <p>adulte:</p>
     <select name="adulte">
         <option value="0">0</option>
@@ -38,6 +49,105 @@
         <option value="8">8</option>
         <option value="9">9</option>
     </select>
-    
+    <table border="2">
+        <tr>
+            <th colspan="6"><input type="text" class="1" name="recherche" placeholder="rechercher" style="width: 99%;" ></th>            
+        </tr>
+        <tr>
+        <td rowspan="4" colspan="3">
+            <select size="3" multiple>
+                <option value="lisbonne">1</option>
+                <option value="porto">2</option>
+                <option value="lhi">3</option>
+                <option value="4">4</option>            </select>
+        </td>
+        <td>
+            <label for="start">Beginning:</label>
+            <input type="date" id="start" name="datestart" min="2025-02-07" max="2030-11-11" >
+        </td>
+        <td>
+            nombre d'adulte:
+            <select name="adulte">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select></td>
+        <td rowspan="2">
+            <details>
+                <summary>Options</summary>
+                <p><label><input type="checkbox" name="options1" value="petit-dejeuner"> Petit-déjeuner inclus</label></p>
+                <p><label><input type="checkbox" name="options2" value="vue-sur-mer"> Vue sur la mer</label></p>
+                <p><label><input type="checkbox" name="options3" value="annulation-gratuite"> Annulation gratuite</label></p>
+                <p><label><input type="checkbox" name="options4" value="bagage-inclus"> Bagage en soute inclus</label></p>
+                <p><label><input type="checkbox" name="options5" value="animaux"> Animaux</label></p>
+            </details>
+        </td>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="end">ending:</label>
+                <input type="date" id="end" name="dateend" min="2025-02-07" max="2030-11-11" >
+            </td>
+            <td>
+                nombre d'enfant:
+                <select name="enfant">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+-->
+
+    <ol>
+        <li>
+            ville <input type="text" name="recherche" placeholder="rechercher">
+        </li>
+        <li>
+            nombre de personne:
+            adulte:<input type="number" max="80" min="1" name="nbradulte" step="1" value="1">
+            enfant:<input type="number" max="80" min="0" name="nbrenfant" step="1" value="1">
+        </li>
+
+    </ol>
+    <ol>
+        <li>Destination
+            <ul>
+                <li>ville <input type="text" name="recherche" placeholder="rechercher"></li>
+                <li></li>
+            </ul>
+        </li>
+        <li>Date
+            <ul>
+                <li>    <label for="start">Beginning:</label>
+                    <input type="date" id="start" name="datestart" min="2025-02-07" max="2030-11-11" >
+                    </li>
+                <li><label for="end">ending:</label>
+                    <input type="date" id="end" name="dateend" min="2025-02-07" max="2030-11-11" ></li>
+            </ul>
+        </li>
+        <li>Nombre de Personnes
+            <ul>
+                <li>adulte: <input type="number" max="80" min="1" name="nbradulte" step="1" value="1"></li>
+                <li>enfant: <input type="number" max="80" min="0" name="nbrenfant" step="1" value="1"></li>
+            </ul>
+        </li>
+    </ol>
 </body>
 </html>
