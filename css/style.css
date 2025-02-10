@@ -1,0 +1,95 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #D9D0BF;
+}
+
+.navbar {
+    background-color: #034C8C;
+    font-family: Garamond, serif;
+    font-size: 20px;
+    height: 110px;
+    padding: 10px;
+    margin: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.titre {
+    color: white;
+    font-size: 55px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-right: 50px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.navlinks {
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navlinks a {
+    border: 3px solid #D9851E;
+    padding: 8px;
+    background-color: #048ABF;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.navlinks a:hover {
+    background-color: #034C8C;
+    transform: scale(1.1);
+}
+
+.container {
+    font-family: Montserrat, sans-serif;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center; /* Vertical */
+    justify-content: center; /* Horizontal */
+}
+
+.offres {
+    background-image: url("../src/Azulejos.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 800px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center; /* Vertical */
+    flex-direction: row;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+.offres > div {
+    width: 750px;
+    height: 300px;
+    margin: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center; /* Vertical */
+    justify-content: center; /* Horizontal */
+    flex-direction: column;
+    scroll-snap-align: center;
+    background-color: #9d9d9d;
+}
