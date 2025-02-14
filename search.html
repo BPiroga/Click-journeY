@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="css/style.css">  <!-- CSS global -->
+    <link rel="stylesheet" href="css/search.css"> <!-- CSS spécifique -->
+    
+    
     <title>CY Portugal</title>
 </head>
 <body>
@@ -114,7 +118,9 @@
         </tr>
     </table>
 -->
-
+<!--<fieldset>
+    <legend>Recherche</legend>-->
+    <!--
     <ol>
         <li>
             ville <input type="text" name="recherche" placeholder="rechercher">
@@ -125,7 +131,9 @@
             enfant:<input type="number" max="80" min="0" name="nbrenfant" step="1" value="1">
         </li>
 
-    </ol>
+    </ol>-->
+
+    <!--
     <ol>
         <li>Destination
             <ul>
@@ -148,6 +156,78 @@
                 <li>enfant: <input type="number" max="80" min="0" name="nbrenfant" step="1" value="1"></li>
             </ul>
         </li>
+        <li>Prix</li>
     </ol>
+</fieldset>-->
+
+
+
+
+<!--<div class="navbar">
+    <div class="titre">Voyages Culinaires</div>
+</div>
+<div class="container">-->
+    
+    <!--<div class="filters">
+        <input type="date" placeholder="Date de départ">
+        <select>
+            <option>Choisissez une ville</option>
+            <option>Lisbonne</option>
+            <option>Porto</option>
+            <option>Algarve</option>
+        </select>
+        <select>
+            <option>Type d'expérience</option>
+            <option>Dégustation de vins</option>
+            <option>Cours de cuisine</option>
+            <option>Street food</option>
+        </select>
+        <button>Rechercher</button>
+    </div>-->
+    
+    <div class="filters">
+        <input type="date" placeholder="jj/mm/aaaa">
+        <select>
+            <option>Choisissez une ville</option>
+            <option>Lisbonne</option>
+            <option>Porto</option>
+        </select>
+        <select>
+            <option>Type d'expérience</option>
+            <option>Vins</option>
+            <option>Street Food</option>
+        </select>
+    
+        <!-- Nouveau : Prix maximum -->
+        <input type="number" placeholder="Prix max (€)" min="0">
+    
+        
+        <div class="options">
+            <details class="options-details">
+                <summary class="options-btn">Options</summary>
+                <label><input type="checkbox" name="option1"> Voyager avec des enfants</label>
+                <label><input type="checkbox" name="option2"> Vue sur la mer</label>
+                <label><input type="checkbox" name="option3"> Annulation gratuite</label>
+                <label><input type="checkbox" name="option4"> Bagage inclus</label>
+                <label><input type="checkbox" name="option5"> Animaux autorisés</label>
+            </details>
+        </div>
+        
+        <button>Rechercher</button>
+    </div>
+    <div class="voyages">
+        <div class="voyage-card">
+            <img src="https://source.unsplash.com/350x200/?food,portugal" alt="Voyage culinaire">
+            <h3>Découverte des vins de Porto</h3>
+            <p>3 jours - À partir de 299€</p>
+        </div>
+        <div class="voyage-card">
+            <img src="https://source.unsplash.com/350x200/?seafood,portugal" alt="Voyage culinaire">
+            <h3>Street food à Lisbonne</h3>
+            <p>2 jours - À partir de 199€</p>
+        </div>
+    </div>
+    
+</div>
 </body>
 </html>
