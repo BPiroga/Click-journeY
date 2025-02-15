@@ -1,7 +1,25 @@
+html {
+    margin: 0;
+    padding: 0;  
+}
+
 body {
-    margin: 0px;
-    padding: 0px;
-    background-color: #D9D0BF;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf2de;
+}
+
+footer {
+    background-color: #034C8C;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 3% 0 3% 0;
+    color: white;
+}
+
+footer p {
+    margin-left: 3%;
 }
 
 .navbar {
@@ -9,12 +27,17 @@ body {
     font-family: Garamond, serif;
     font-size: 20px;
     height: 110px;
-    padding: 10px;
-    margin: 20px;
-    margin-top: 40px;
+    padding: 1%;
+    margin: 3%;
+    margin-top: 3%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin: 0 2% 0 2%;
     align-items: center;
 }
 
@@ -24,29 +47,23 @@ body {
     font-style: italic;
     font-weight: bold;
     letter-spacing: 4px;
-    margin-right: 50px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: white;
-    margin-left: 50px;
-    margin-right: 20px;
 }
 
 .navlinks {
-    margin-left: auto;
-    margin-right: 20px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
 }
 
 .navlinks a {
+    text-decoration: none;
+    margin: 0 10% 0 10%;
+    color: white;
     border: 3px solid #D9851E;
     padding: 8px;
     background-color: #048ABF;
     border-radius: 8px;
     transition: 0.3s;
+    white-space: nowrap;
 }
 
 .navlinks a:hover {
@@ -92,4 +109,143 @@ body {
     flex-direction: column;
     scroll-snap-align: center;
     background-color: #9d9d9d;
+}
+
+
+
+/* Recherche */
+
+.container-recherche {
+    margin: 5% 3% 20% 3%;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #034C8C;
+    border-radius: 8px;
+}
+
+.filters input[type="checkbox"] {
+    width: auto;
+    margin-left: 5px;
+}
+
+.filters label {
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filters select, .filters input, .filters button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+.filters select, .filters input {
+    background-color: white;
+    color: black;
+}
+
+.filters button {
+    background-color: #D9851E;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filters button:hover {
+    background-color: #048ABF;
+}
+
+.voyages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.voyage-card {
+    border: 2px solid #034C8C;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.voyage-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.voyage-card h3 {
+    margin: 10px 0;
+    color: #034C8C;
+}
+
+.voyage-card p {
+    font-size: 16px;
+    color: #555;
+}
+.options-details {
+    background-color: #034C8C;
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.options-details summary {
+    background-color: #D9851E;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    align-items: center;
+}
+
+.options-details summary:hover {
+    background-color: #048ABF;
+}
+
+.options-details label {
+    display: block;
+    margin: 8px 0;
+}
+
+
+
+/* Présentation */
+
+.presentation-titre {
+    margin-top: 10%;
+    margin-bottom: 2%;
+    color: #555;
+    font-size: 35px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.presentation-texte {
+    margin: 0 auto;
+    margin-bottom: 20%;
+    color: #555;
+    line-height: 1.8;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    max-width: 1000px;
 }
