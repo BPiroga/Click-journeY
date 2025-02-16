@@ -428,3 +428,13 @@ body>p {
 .admin-profils p{
     margin-right: 5%;    
 }
+
+
+/* offre vin*/
+
+#resumer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6% auto;
+}
