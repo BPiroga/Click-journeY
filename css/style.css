@@ -56,7 +56,7 @@ footer p {
 
 .navlinks a {
     text-decoration: none;
-    margin: 0 10% 0 10%;
+    margin: 0 5% 0 5%;
     color: white;
     border: 3px solid #D9851E;
     padding: 8px;
@@ -248,4 +248,73 @@ footer p {
     text-align: center;
     justify-content: center;
     max-width: 1000px;
+}
+
+/* Connexion */
+
+.connexion {
+    width: 300px;
+    margin: 0 auto;
+    padding: 3%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.connexion table {
+    width: 100%;
+}
+
+.titre-connexion {
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.connexion td {
+    display: flex;
+    padding: 10px 0;
+}
+
+.connexion input[type="email"],
+.connexion input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+}
+
+.form-buttons button {
+    width: 100%;
+    padding: 3%;
+    margin: 3% 0;
+    background-color: #034C8C;
+    border: 3px solid #D9851E;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-buttons button:hover {
+    background-color: #048ABF;
+}
+
+.form-buttons a {
+    display: block;
+    text-align: center;
+    margin: 3% 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.form-buttons a:hover {
+    text-decoration: underline;
 }

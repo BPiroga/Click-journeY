@@ -11,35 +11,36 @@
         <a class="logo" href="index.html"><img src="../src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
         <p class="titre">CY Portugal</p>
     </header>
-    <div class="connexion">
-        <form type="traitement_connexion.php" method="post">
-            <table>
-                <tr>
-                    <td>Connexion</td>
-                </tr>
-                <tr>
-                    <td>Adresse mail :</td>
-                    <td>
-                        <input type="email" name="email" placeholder="Entrer votre adresse mail" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Code :</td>
-                    <td>
-                        <input type="password" name="code" placeholder="Entrer votre code" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td"> 
-                        <button type="submit"> SE CONNECTER</button> <!--<a href="mettre la page d'acueille">SE CONNECTER</a>-->
-                        <button type="reset">EFFACER</button>
-                        <a href="inscription.html" target="_blank">Creer un compte ?</a>
-                    </td>
-                </tr>
-            </table>
-        </form>
+    <div class="container">
+        <div class="connexion">
+            <form type="traitement_connexion.php" method="post">
+                <table>
+                    <tr>
+                        <td class="titre-connexion">Connexion</td>
+                    </tr>
+                    <tr>
+                        <td>Adresse mail :</td>
+                        <td>
+                            <input type="email" name="email" placeholder="Entrer votre adresse mail" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Code :</td>
+                        <td>
+                            <input type="password" name="code" placeholder="Entrer votre code" required>
+                        </td>
+                    </tr>
+                </table>
+                <div class="form-buttons">
+                    <button type="submit">SE CONNECTER</button>
+                    <button type="reset">EFFACER</button>
+                    <a href="inscription.html" target="_blank">Creer un compte ?</a>
+                </div>
+            </form>
+        </div>
     </div>
     <footer>
         <p>&copy; 2025 Agence de Voyage</p>
     </footer>
+</body>
 </html>
