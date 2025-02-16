@@ -10,16 +10,18 @@ body {
 }
 
 footer {
+    display: flex;
     background-color: #034C8C;
     bottom: 0;
     width: 100%;
-    margin: 0;
     padding: 3% 0 3% 0;
-    color: white;
 }
 
-footer p {
-    margin-left: 3%;
+footer p,
+footer a {
+    font-size: 18px;
+    color: white;
+    margin: 0 auto;
 }
 
 .navbar {
@@ -84,8 +86,8 @@ footer p {
     background-image: url("../src/Azulejos.jpg");
     background-size: cover;
     background-position: center;
-    width: 800px;
-    height: 350px;
+    width: 900px;
+    height: 380px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
     display: flex;
@@ -98,9 +100,10 @@ footer p {
 }
 
 .offres > div {
+    position: relative;
     width: 750px;
     height: 300px;
-    margin: 25px;
+    margin: 0 75px;
     border-radius: 10px;
     display: flex;
     flex: 0 0 auto;
@@ -109,6 +112,52 @@ footer p {
     flex-direction: column;
     scroll-snap-align: center;
     background-color: #9d9d9d;
+}
+
+#vin-porto {
+    position: absolute;
+    width: 750px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#verre-de-vin {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 5%;
+    left: 10%;
+    object-fit: cover;
+}
+
+#street-food {
+    position: absolute;
+    width: 750px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.button-offres {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: #D9851E;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-offres:hover {
+    background-color: #794b13;
 }
 
 
