@@ -78,8 +78,9 @@ footer a {
     margin-top: 70px;
     margin-bottom: 100px;
     display: flex;
-    align-items: center; /* Vertical */
-    justify-content: center; /* Horizontal */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .offres {
@@ -160,6 +161,42 @@ footer a {
     background-color: #794b13;
 }
 
+.bar-recherche {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #034C8C;
+    border-radius: 8px;
+}
+
+.bar-recherche input {
+    width: 100%;
+    margin: 5px 5% 5px 5px;
+    padding: 15px;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+.bar-recherche button {
+    margin-right: 5px;
+    padding: 10px;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #D9851E;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bar-recherche button:hover {
+    background-color: #048ABF;
+}
+
 
 
 /* Recherche */
@@ -179,7 +216,7 @@ footer a {
     border-radius: 8px;
 }
 
-.filters input[type="checkbox"] {
+.filters input {
     width: auto;
     margin-left: 5px;
 }
@@ -233,6 +270,11 @@ footer a {
     height: 350px;
     object-fit: cover;
     border-radius: 8px;
+    transition: 0.3s;
+}
+
+.voyage-card img:hover {
+    transform: scale(1.03);
 }
 
 .voyage-card h3 {
@@ -249,6 +291,7 @@ footer a {
     display: block;
     margin: 8px 0;
 }
+
 
 
 /* Présentation */
@@ -274,6 +317,8 @@ footer a {
     justify-content: center;
     max-width: 1000px;
 }
+
+
 
 /* Connexion */
 
@@ -430,11 +475,128 @@ body>p {
 }
 
 
-/* offre vin*/
+
+
+/* Pages Offres */
+
+.description {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.description .title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #034C8C;
+    margin-bottom: 20px;
+}
+
+.description img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.description p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
 
 #resumer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#resumer p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #034C8C;
+    margin-bottom: 20px;
+}
+
+#resumer .nbrnuit,
+#resumer .découverte,
+#resumer .transport {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 6% auto;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#resumer img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#resumer div p {
+    font-size: 18px;
+    color: #555;
+}
+
+.parcours {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.parcours .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #034C8C;
+    margin-bottom: 20px;
+}
+
+.parcours ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.parcours ul li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.parcours ul ul {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    list-style-type: circle;
+}
+
+.parcours ul ul li {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.parcours button {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #D9851E;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.parcours button:hover {
+    background-color: #794b13;
 }
