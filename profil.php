@@ -19,13 +19,13 @@ if (file_exists($jsonFile)) {
     }
 }
 
-/* Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
+// Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
 if (!isset($userData)) {
     header('Location: connexion.php');
     exit();
 }
-*/
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -65,7 +65,7 @@ if (!isset($userData)) {
 
         <div>
             <p>Date de naissance :</p>
-            <input type="text" value="<?php echo htmlspecialchars($userData['date_naissance']); ?>" disabled>
+            <input type="text" value="<?php echo htmlspecialchars(date('d/m/Y', strtotime($userData['date_naissance']))); ?>" disabled>
             <button type="button">
                 <span>&#9998</span> Modifier
             </button>

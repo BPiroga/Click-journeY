@@ -1,6 +1,8 @@
 <?php
 session_start(); // Démarrer la session pour stocker les informations utilisateur
 
+$errorMessage = ''; // Variable pour stocker le message d'erreur
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Récupérer les données du formulaire
     $email = isset($_POST['email']) ? trim($_POST['email']) : '';
@@ -12,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $users = json_decode($jsonData, true);
 
     // Vérifier si l'utilisateur existe
-    global $userFound;
     $userFound = false;
     foreach ($users['users'] as $user) {
         // Vérifier l'email et le mot de passe (assurez-vous que les mots de passe sont hachés)
@@ -21,6 +22,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['email'] = $email; // Stocker l'email dans la session
             break;
         }
+    }
+
+    // Gérer la redirection ou afficher un message d'erreur
+    if ($userFound) {
+        header('Location: profil.php'); // Rediriger vers la page profil
+        exit(); // Terminer le script après la redirection
+    } else {
+        $errorMessage = 'Adresse email ou mot de passe incorrect.'; // Définir le message d'erreur
     }
 }
 ?>
@@ -59,14 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </tr>
                 </table>
                 <?php
-                    global $userFound;
-                    if ($userFound) {
-                        // Connexion réussie
-                        header('Location: profil.php'); // Rediriger vers la page profil
-                        exit(); // Terminer le script après la redirection
-                    } else {
-                        // Connexion échouée
-                        echo '<p style="color:red">Adresse email ou mot de passe incorrect.</p>';
+                    if (!empty($errorMessage)) {
+                        echo '<p style="color:red">' . $errorMessage . '</p>';
                     }
                 ?>
                 <div class="form-buttons">

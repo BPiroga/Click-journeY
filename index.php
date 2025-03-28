@@ -1,3 +1,15 @@
+<?php
+session_start(); // Démarrer la session pour vérifier si l'utilisateur est connecté
+$isLoggedIn = isset($_SESSION['email']); // Vérifier si l'email est stocké dans la session
+
+// Gérer la déconnexion
+if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
+    session_destroy(); // Détruire la session
+    header('Location: index.php'); // Rediriger vers la page d'accueil
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,7 +25,12 @@
         <div class="navlinks">
             <a href="presentation.php">Présentation</a>
             <a href="recherche.php">Recherche</a>
-            <a href="connexion.php" class="loginbtn">Se connecter</a>
+            <?php if ($isLoggedIn): ?>
+                <a href="profil.php" class="loginbtn">Compte</a>
+                <a href="index.php?logout=true" class="logoutbtn">Se déconnecter</a>
+            <?php else: ?>
+                <a href="connexion.php" class="loginbtn">Se connecter</a>
+            <?php endif; ?>
         </div>
     </header>
     <div class="container">

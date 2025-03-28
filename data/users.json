@@ -13,6 +13,13 @@
             "date_naissance": "1985-05-15",
             "email": "marie.durand@example.com",
             "mot_de_passe": "hashed_password_456"
+        },
+        {
+            "prenom": "Alice",
+            "nom": "Martin",
+            "date_naissance": "1975-06-15",
+            "email": "alice.martin@example.com",
+            "mot_de_passe": "hashed_password_789"
         }
     ]
 }
