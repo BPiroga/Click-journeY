@@ -4,25 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>CY Portugal</title>
 </head>
 
 <body>
     <header class="navbar">
-        <a class="logo" href="../index.html"><img src="../../src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
+        <a class="logo" href="index.php"><img src="src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
         <p class="titre">CY Portugal</p>
         <div class="navlinks">
-            <a href="../presentation.html">Présentation</a>
-            <a href="../recherche.html">Recherche</a>
-            <a href="../connexion.html" class="loginbtn">Se connecter</a>
+            <a href="presentation.php">Présentation</a>
+            <a href="recherche.php">Recherche</a>
+            <a href="connexion.php" class="loginbtn">Se connecter</a>
         </div>
     </header>
     <div class="container">
 
         <div class="description">
             <p class="title">Découverte des street food à Lisbonne</p>
-            <img src="../../src/Street food.webp" alt="Street food">
+            <img src="src/Street food.webp" alt="Street food">
             <p>
                 Découvrez Lisbonne autrement à travers ses saveurs de rue authentiques et gourmandes ! Ce séjour vous plongera dans l’ambiance vibrante des marchés, des quartiers animés et des meilleurs spots de street food de la capitale portugaise.
             </p>
@@ -30,13 +30,13 @@
 
         <div id="resumer">
             <p>Ce qui est inclus dans le circuit</p>
-            <div class="nbrnuit"> <img src="../../src/nuit.png"alt="icone nuit">
+            <div class="nbrnuit"> <img src="src/nuit.png"alt="icone nuit">
                 <p>2 nuits</p>
             </div>
-            <div class="découverte"> <img src="../../src/découverte.png" alt="icone découverte">
+            <div class="découverte"> <img src="src/découverte.png" alt="icone découverte">
                 <p>2 découvertes culinaires</p>
             </div>
-            <div class="transport"> <img src="../../src/transport.png" alt="icone transport">
+            <div class="transport"> <img src="src/transport.png" alt="icone transport">
                 <p>Transport inclus</p>
             </div>
         </div>
@@ -67,8 +67,8 @@
     </div>
     <footer>
         <p>&copy; 2025 CY Portugal</p>
-        <a href="../profil.html">Compte</a>
-        <a href="../admin.html">Administration</a>
+        <a href="profil.php">Compte</a>
+        <a href="admin.php">Administration</a>
         <p>Contact : CY Tech</p>
     </footer>
 </body>

@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>CY Portugal</title>
 </head>
 <body>
     <header class="navbar">
-        <a class="logo" href="index.html"><img src="../src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
+        <a class="logo" href="index.php"><img src="src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
         <p class="titre">CY Portugal</p>
         <div class="navlinks">
-            <a href="presentation.html">Présentation</a>
-            <a href="recherche.html">Recherche</a>
+            <a href="presentation.php">Présentation</a>
+            <a href="recherche.php">Recherche</a>
         </div>
     </header>
     <p>Profils utilisateurs</p>
@@ -30,7 +30,7 @@
                     <input type="text" value="..." disabled>
                 </div>
             </div>
-            <a class="button-link-admin" href="profil.html">Voir le profil</a>
+            <a class="button-link-admin" href="profil.php">Voir le profil</a>
             <button type="button">
                 VIP
             </button>
@@ -50,7 +50,7 @@
                     <input type="text" value="..." disabled>
                 </div>
             </div>
-            <a class="button-link-admin" href="profil.html">Voir le profil</a>
+            <a class="button-link-admin" href="profil.php">Voir le profil</a>
             <button type="button">
                 VIP
             </button>
@@ -70,7 +70,7 @@
                     <input type="text" value="..." disabled>
                 </div>
             </div>
-            <a class="button-link-admin" href="profil.html">Voir le profil</a>
+            <a class="button-link-admin" href="profil.php">Voir le profil</a>
             <button type="button">
                 VIP
             </button>
@@ -90,7 +90,7 @@
                     <input type="text" value="..." disabled>
                 </div>
             </div>
-            <a class="button-link-admin" href="profil.html">Voir le profil</a>
+            <a class="button-link-admin" href="profil.php">Voir le profil</a>
             <button type="button">
                 VIP
             </button>
@@ -102,8 +102,8 @@
     </div>
     <footer>
         <p>&copy; 2025 CY Portugal</p>
-        <a href="profil.html">Compte</a>
-        <a href="admin.html">Administration</a>
+        <a href="profil.php">Compte</a>
+        <a href="admin.php">Administration</a>
         <p>Contact : CY Tech</p>
     </footer>
 </body>

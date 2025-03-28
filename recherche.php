@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>CY Portugal</title>
 </head>
 <body>
     <header class="navbar">
-        <a class="logo" href="index.html"><img src="../src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
+        <a class="logo" href="index.php"><img src="src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
         <p class="titre">CY Portugal</p>
         <div class="navlinks">
-            <a href="presentation.html">Présentation</a>
-            <a href="recherche.html">Recherche</a>
-            <a href="connexion.html" class="loginbtn">Se connecter</a>
+            <a href="presentation.php">Présentation</a>
+            <a href="recherche.php">Recherche</a>
+            <a href="connexion.php" class="loginbtn">Se connecter</a>
         </div>
     </header>
     <div class="container-recherche">
@@ -50,16 +50,16 @@
         <div class="voyages">
 
             <div class="voyage-card">
-                <a href="offres/vin.html">
-                    <img src="../src/Vin Porto.jpg" alt="Vin Porto">
+                <a href="vin.php">
+                    <img src="src/Vin Porto.jpg" alt="Vin Porto">
                 </a>
                 <h3>Découverte des vins de Porto</h3>
                 <p>3 jours - À partir de 299€</p>
             </div>
 
             <div class="voyage-card">
-                <a href="offres/street.html">
-                    <img src="../src/Street food.webp" alt="Street food">
+                <a href="street.php">
+                    <img src="src/Street food.webp" alt="Street food">
                 </a>
                 <h3>Street food à Lisbonne</h3>
                 <p>2 jours - À partir de 199€</p>
@@ -70,8 +70,8 @@
     </div>
     <footer>
         <p>&copy; 2025 CY Portugal</p>
-        <a href="profil.html">Compte</a>
-        <a href="admin.html">Administration</a>
+        <a href="profil.php">Compte</a>
+        <a href="admin.php">Administration</a>
         <p>Contact : CY Tech</p>
     </footer>
 </body>

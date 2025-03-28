@@ -1,0 +1,18 @@
+{
+    "users": [
+        {
+            "prenom": "Jean",
+            "nom": "Dupont",
+            "date_naissance": "1990-01-01",
+            "email": "jean.dupont@example.com",
+            "mot_de_passe": "hashed_password_123"
+        },
+        {
+            "prenom": "Marie",
+            "nom": "Durand",
+            "date_naissance": "1985-05-15",
+            "email": "marie.durand@example.com",
+            "mot_de_passe": "hashed_password_456"
+        }
+    ]
+}
