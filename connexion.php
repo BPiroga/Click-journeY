@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $users = json_decode($jsonData, true);
 
     // Vérifier si l'utilisateur existe
+    global $userFound;
     $userFound = false;
     foreach ($users['users'] as $user) {
         // Vérifier l'email et le mot de passe (assurez-vous que les mots de passe sont hachés)
@@ -20,15 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['email'] = $email; // Stocker l'email dans la session
             break;
         }
-    }
-
-    if ($userFound) {
-        // Connexion réussie
-        header('Location: profil.php'); // Rediriger vers la page profil
-        exit(); // Terminer le script après la redirection
-    } else {
-        // Connexion échouée
-        echo '<p>Adresse email ou mot de passe incorrect.</p>';
     }
 }
 ?>
@@ -48,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </header>
     <div class="container">
         <div class="connexion">
-            <form method="post">
+            <form method="post" action="connexion.php">
                 <table>
                     <tr>
                         <td class="titre-connexion">Connexion</td>
@@ -66,6 +58,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </td>
                     </tr>
                 </table>
+                <?php
+                    global $userFound;
+                    if ($userFound) {
+                        // Connexion réussie
+                        header('Location: profil.php'); // Rediriger vers la page profil
+                        exit(); // Terminer le script après la redirection
+                    } else {
+                        // Connexion échouée
+                        echo '<p style="color:red">Adresse email ou mot de passe incorrect.</p>';
+                    }
+                ?>
                 <div class="form-buttons">
                     <button type="submit">SE CONNECTER</button>
                     <button type="reset">EFFACER</button>

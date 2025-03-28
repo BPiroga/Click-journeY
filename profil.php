@@ -19,11 +19,12 @@ if (file_exists($jsonFile)) {
     }
 }
 
-// Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
+/* Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
 if (!isset($userData)) {
     header('Location: connexion.php');
     exit();
 }
+*/
 ?>
 <!DOCTYPE html>
 <html lang="fr">
