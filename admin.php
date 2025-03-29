@@ -1,3 +1,39 @@
+<?php
+require_once 'php/session_outils.php'; // Inclure les outils de session
+
+// Lire les données des utilisateurs depuis le fichier JSON
+$usersFile = 'data/users.json';
+$usersData = json_decode(file_get_contents($usersFile), true);
+$users = &$usersData['users']; // Référence pour modifier directement les données
+
+// Gérer les actions VIP et bannissement
+if (isset($_GET['action']) && isset($_GET['email'])) {
+    $email = $_GET['email'];
+    $action = $_GET['action'];
+
+    foreach ($users as &$user) {
+        if ($user['email'] === $email) {
+            if ($action === 'vip') {
+                // Gérer le statut VIP
+                if ($user['role'] === 'user') {
+                    $user['role'] = 'vip';
+                } elseif ($user['role'] === 'vip') {
+                    $user['role'] = 'user';
+                }
+            } elseif ($action === 'ban') {
+                // Gérer le bannissement
+                $user['ban'] = isset($user['ban']) ? !$user['ban'] : true; // Basculer entre true/false
+            }
+            break;
+        }
+    }
+
+    // Sauvegarder les modifications dans le fichier JSON
+    file_put_contents($usersFile, json_encode($usersData, JSON_PRETTY_PRINT));
+    header('Location: admin.php'); // Recharger la page pour refléter les changements
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,92 +49,39 @@
         <div class="navlinks">
             <a href="presentation.php">Présentation</a>
             <a href="recherche.php">Recherche</a>
+            <?php renderAuthLinks($isLoggedIn); ?>
         </div>
     </header>
     <p>Profils utilisateurs</p>
     <div class="profil-info">
-        <p>Nombre utilisateurs : 4</p>
+        <p>Nombre utilisateurs : <?php echo count($users); ?></p>
         
+        <?php foreach ($users as $user): ?>
         <div class="admin-profils">
             <div>
                 <div>
                     <p>Prénom :</p>
-                    <input type="text" value="..." disabled>
+                    <input type="text" value="<?php echo htmlspecialchars($user['prenom']); ?>" style="color: <?php echo isset($user['ban']) && $user['ban'] ? 'red' : 'black'; ?>;" disabled>
                 </div>
                 <div>
                     <p>Nom :</p>
-                    <input type="text" value="..." disabled>
+                    <input type="text" value="<?php echo htmlspecialchars($user['nom']); ?>" style="color: <?php echo isset($user['ban']) && $user['ban'] ? 'red' : 'black'; ?>;" disabled>
                 </div>
             </div>
-            <a class="button-link-admin" href="profil.php">Voir le profil</a>
-            <button type="button">
-                VIP
-            </button>
-            <button type="button">
-                Banissement
-            </button>
+            <!-- Lien pour voir le profil de l'utilisateur -->
+            <a class="button-link-admin" href="profil.php?email=<?php echo urlencode($user['email']); ?>">Voir le profil</a>
+            <!-- Lien pour gérer le statut VIP -->
+            <?php if ($user['role'] !== 'admin'): ?>
+                <a class="button-link-admin" href="admin.php?action=vip&email=<?php echo urlencode($user['email']); ?>">
+                    <?php echo $user['role'] === 'vip' ? 'Retirer VIP' : 'Passer VIP'; ?>
+                </a>
+            <?php endif; ?>
+            <!-- Lien pour gérer le bannissement -->
+            <a class="button-link-admin" href="admin.php?action=ban&email=<?php echo urlencode($user['email']); ?>">
+                <?php echo isset($user['ban']) && $user['ban'] ? 'Débannir' : 'Bannir'; ?>
+            </a>
         </div>
-
-        <div class="admin-profils">
-            <div>
-                <div>
-                    <p>Prénom :</p>
-                    <input type="text" value="..." disabled>
-                </div>
-                <div>
-                    <p>Nom :</p>
-                    <input type="text" value="..." disabled>
-                </div>
-            </div>
-            <a class="button-link-admin" href="profil.php">Voir le profil</a>
-            <button type="button">
-                VIP
-            </button>
-            <button type="button">
-                Banissement
-            </button>
-        </div>
-
-        <div class="admin-profils">
-            <div>
-                <div>
-                    <p>Prénom :</p>
-                    <input type="text" value="..." disabled>
-                </div>
-                <div>
-                    <p>Nom :</p>
-                    <input type="text" value="..." disabled>
-                </div>
-            </div>
-            <a class="button-link-admin" href="profil.php">Voir le profil</a>
-            <button type="button">
-                VIP
-            </button>
-            <button type="button">
-                Banissement
-            </button>
-        </div>
-
-        <div class="admin-profils">
-            <div>
-                <div>
-                    <p>Prénom :</p>
-                    <input type="text" value="..." disabled>
-                </div>
-                <div>
-                    <p>Nom :</p>
-                    <input type="text" value="..." disabled>
-                </div>
-            </div>
-            <a class="button-link-admin" href="profil.php">Voir le profil</a>
-            <button type="button">
-                VIP
-            </button>
-            <button type="button">
-                Banissement
-            </button>
-        </div>
-
+        <?php endforeach; ?>
     </div>
     <footer>
         <p>&copy; 2025 CY Portugal</p>

@@ -1,3 +1,4 @@
+<?php require_once '../php/session_outils.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -15,7 +16,7 @@
         <div class="navlinks">
             <a href="../presentation.php">Présentation</a>
             <a href="../recherche.php">Recherche</a>
-            <a href="../connexion.php" class="loginbtn">Se connecter</a>
+            <?php renderAuthLinks($isLoggedIn); ?>
         </div>
     </header>
     <div class="container">
@@ -32,7 +33,7 @@
 
         <div id="resumer">
             <p>Ce qui est inclus dans le circuit</p>
-            <div class="nbrnuit"> <img src="../src/nuit.png"alt="icone nuit">
+            div class="brnuit"> <ig src="../sc/nuit.png"alt="icone nuit">
                 <p>2 nuits</p>
             </div>
             <div class="découverte"> <img src="../src/découverte.png" alt="icone découverte">

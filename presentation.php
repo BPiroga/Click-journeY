@@ -1,3 +1,4 @@
+<?php require_once 'php/session_outils.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,11 +14,11 @@
         <div class="navlinks">
             <a href="presentation.php">Présentation</a>
             <a href="recherche.php">Recherche</a>
-            <a href="connexion.php" class="loginbtn">Se connecter</a>
+            <?php renderAuthLinks($isLoggedIn); ?>
         </div>
     </header>
     <h1 class="presentation-titre">
-                Bienvenue chez CY Portugal, votre agence de voyage culinaire au Portugal !
+        Bienvenue chez CY Portugal, votre agence de voyage culinaire au Portugal !
     </h1>
     <p class="presentation-texte">   
         Découvrez le Portugal à travers ses saveurs uniques, ses traditions culinaires et ses paysages. Nous vous proposons des expériences immersives telles que des dégustations de vins ainsi que des spécialités locales. Vivez un voyage sensoriel inoubliable au cœur de la gastronomie portugaise avec notre agence !

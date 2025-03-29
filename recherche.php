@@ -1,3 +1,4 @@
+<?php require_once 'php/session_outils.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,7 +14,7 @@
         <div class="navlinks">
             <a href="presentation.php">Présentation</a>
             <a href="recherche.php">Recherche</a>
-            <a href="connexion.php" class="loginbtn">Se connecter</a>
+            <?php renderAuthLinks($isLoggedIn); ?>
         </div>
     </header>
     <div class="container-recherche">

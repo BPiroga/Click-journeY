@@ -1,15 +1,6 @@
 <?php
-session_start(); // Démarrer la session pour vérifier si l'utilisateur est connecté
-$isLoggedIn = isset($_SESSION['email']); // Vérifier si l'email est stocké dans la session
-
-// Gérer la déconnexion
-if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
-    session_destroy(); // Détruire la session
-    header('Location: index.php'); // Rediriger vers la page d'accueil
-    exit();
-}
+require_once 'php/session_outils.php'; // Inclure le fichier session_outils.php
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,12 +16,7 @@ if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
         <div class="navlinks">
             <a href="presentation.php">Présentation</a>
             <a href="recherche.php">Recherche</a>
-            <?php if ($isLoggedIn): ?>
-                <a href="profil.php" class="loginbtn">Compte</a>
-                <a href="index.php?logout=true" class="logoutbtn">Se déconnecter</a>
-            <?php else: ?>
-                <a href="connexion.php" class="loginbtn">Se connecter</a>
-            <?php endif; ?>
+            <?php renderAuthLinks($isLoggedIn); // Appel de la fonction ?>
         </div>
     </header>
     <div class="container">
@@ -38,7 +24,7 @@ if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
             <div>
                 <img src="src/Vin Porto.jpg" alt="Vin Porto" id="vin-porto">
                 <img src="src/Verre de vin.webp" alt="Verre de vin" id="verre-de-vin">
-                <a class="button-offres" href="vin.php">299€</a>
+                <a class="button-offres" href="offres/offre.php">299€</a>
             </div>
             <div>
                 <img src="src/Street food.webp" alt="Street food" id="street-food">
@@ -54,7 +40,7 @@ if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
         <div class="voyages">
 
             <div class="voyage-card">
-                <a href="vin.php">
+                <a href="offres/offre.php">
                     <img src="src/Vin Porto.jpg" alt="Vin Porto">
                 </a>
                 <h3>Découverte des vins de Porto</h3>

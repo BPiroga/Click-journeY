@@ -1,29 +1,42 @@
 <?php
-// Charger les données utilisateur depuis le fichier JSON
-session_start(); // Assurez-vous que la session est démarrée pour stocker les informations utilisateur
+require_once 'php/session_outils.php'; // Inclure les outils de session
 $jsonFile = 'data/users.json';
 $userData = null;
 
+// Charger les données utilisateur depuis le fichier JSON
 if (file_exists($jsonFile)) {
     $jsonData = file_get_contents($jsonFile);
     $users = json_decode($jsonData, true);
 
-    // Vérifier si l'utilisateur est connecté
-    if (isset($_SESSION['email'])) {
+    // Vérifier si un email est passé dans l'URL
+    if (isset($_GET['email'])) {
+        $selectedEmail = $_GET['email'];
         foreach ($users['users'] as $user) {
-            if ($user['email'] === $_SESSION['email']) {
+            if ($user['email'] === $selectedEmail) {
                 $userData = $user;
                 break;
+            }
+        }
+    } else {
+        // Si aucun email n'est passé, afficher le profil de l'utilisateur connecté
+        if (isset($_SESSION['email'])) {
+            foreach ($users['users'] as $user) {
+                if ($user['email'] === $_SESSION['email']) {
+                    $userData = $user;
+                    break;
+                }
             }
         }
     }
 }
 
-// Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
+// Rediriger vers la page de connexion si l'utilisateur n'est pas connecté ou si le profil n'est pas trouvé
 if (!isset($userData)) {
     header('Location: connexion.php');
     exit();
 }
+
+// Ne pas rediriger l'admin vers la page admin lorsqu'il consulte son propre profil
 ?>
 
 <!DOCTYPE html>
@@ -41,11 +54,14 @@ if (!isset($userData)) {
         <div class="navlinks">
             <a href="presentation.php">Présentation</a>
             <a href="recherche.php">Recherche</a>
+            <?php renderAuthLinks($isLoggedIn); ?>
         </div>
     </header>
     <p>Profil utilisateur</p>
     <div class="profil-info">
-        <p>Information profil</p>
+        <p class="profil-title" style="<?php echo (isset($userData['role']) && $userData['role'] === 'vip') ? 'color: gold; -webkit-text-stroke: 0.5px black;':''; ?>">
+            <?php echo (isset($userData['role']) && $userData['role'] === 'vip') ? 'Information profil VIP' : 'Information profil'; ?>
+        </p>
 
         <div>
             <p>Prénom :</p>

@@ -5,21 +5,27 @@
             "nom": "Dupont",
             "date_naissance": "1990-01-01",
             "email": "jean.dupont@example.com",
-            "mot_de_passe": "hashed_password_123"
+            "mot_de_passe": "password_123",
+            "role": "admin",
+            "ban": false
         },
         {
             "prenom": "Marie",
             "nom": "Durand",
             "date_naissance": "1985-05-15",
             "email": "marie.durand@example.com",
-            "mot_de_passe": "hashed_password_456"
+            "mot_de_passe": "password_456",
+            "role": "vip",
+            "ban": false
         },
         {
             "prenom": "Alice",
             "nom": "Martin",
             "date_naissance": "1975-06-15",
             "email": "alice.martin@example.com",
-            "mot_de_passe": "hashed_password_789"
+            "mot_de_passe": "password_789",
+            "role": "user",
+            "ban": true
         }
     ]
 }

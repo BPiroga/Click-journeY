@@ -16,19 +16,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Vérifier si l'utilisateur existe
     $userFound = false;
     foreach ($users['users'] as $user) {
+        // Vérifier si l'utilisateur est banni
+        if ($user['email'] === $email && isset($user['ban']) && $user['ban'] === true) {
+            $errorMessage = 'Ce compte a été supprimé.'; // Définir le message d'erreur
+            $userFound = true; // Considérer comme trouvé pour éviter d'autres vérifications
+            break;
+        }
+
         // Vérifier l'email et le mot de passe (assurez-vous que les mots de passe sont hachés)
         if ($user['email'] === $email && $password === $user['mot_de_passe']) {
             $userFound = true;
             $_SESSION['email'] = $email; // Stocker l'email dans la session
+            $_SESSION['role'] = $user['role']; // Stocker le rôle de l'utilisateur dans la session
             break;
         }
     }
 
     // Gérer la redirection ou afficher un message d'erreur
-    if ($userFound) {
+    if ($userFound && empty($errorMessage)) {
         header('Location: profil.php'); // Rediriger vers la page profil
         exit(); // Terminer le script après la redirection
-    } else {
+    } elseif (empty($errorMessage)) {
         $errorMessage = 'Adresse email ou mot de passe incorrect.'; // Définir le message d'erreur
     }
 }
