@@ -1,6 +1,13 @@
 <?php
 require_once 'php/session_outils.php'; // Inclure les outils de session
 
+// Vérifier si l'utilisateur est connecté et est un administrateur
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+    // Rediriger vers la page précédente ou une autre page
+    header('Location: ' . $_SERVER['HTTP_REFERER']); // Redirige vers la page précédente
+    exit();
+}
+
 // Lire les données des utilisateurs depuis le fichier JSON
 $usersFile = 'data/users.json';
 $usersData = json_decode(file_get_contents($usersFile), true);
@@ -67,6 +74,10 @@ if (isset($_GET['action']) && isset($_GET['email'])) {
                     <p>Nom :</p>
                     <input type="text" value="<?php echo htmlspecialchars($user['nom']); ?>" style="color: <?php echo isset($user['ban']) && $user['ban'] ? 'red' : 'black'; ?>;" disabled>
                 </div>
+                <div>
+                    <p>Rôle :</p>
+                    <input type="text" value="<?php echo htmlspecialchars($user['role']); ?>" style="color: <?php echo isset($user['ban']) && $user['ban'] ? 'red' : 'black'; ?>;" disabled>
+                </div>
             </div>
             <!-- Lien pour voir le profil de l'utilisateur -->
             <a class="button-link-admin" href="profil.php?email=<?php echo urlencode($user['email']); ?>">Voir le profil</a>
@@ -77,9 +88,11 @@ if (isset($_GET['action']) && isset($_GET['email'])) {
                 </a>
             <?php endif; ?>
             <!-- Lien pour gérer le bannissement -->
-            <a class="button-link-admin" href="admin.php?action=ban&email=<?php echo urlencode($user['email']); ?>">
-                <?php echo isset($user['ban']) && $user['ban'] ? 'Débannir' : 'Bannir'; ?>
-            </a>
+            <?php if ($user['role'] !== 'admin'): ?>
+                <a class="button-link-admin" href="admin.php?action=ban&email=<?php echo urlencode($user['email']); ?>">
+                    <?php echo isset($user['ban']) && $user['ban'] ? 'Débannir' : 'Bannir'; ?>
+                </a>
+            <?php endif; ?>
         </div>
         <?php endforeach; ?>
     </div>
