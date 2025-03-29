@@ -21,7 +21,7 @@
 
         <div class="description">
             <p class="title">Séjour culinaire dans l'Alentejo</p>
-            <img src="../src/AlentejoFood.webp" alt="Alentejo Food">
+            <img src="../src/AlentejoFood.jpg" alt="Alentejo Food">
             <p>
                 Explorez l'Alentejo, une région du Portugal riche en traditions agricoles et gastronomiques. Partez à la découverte de ses spécialités à base de viande, fromage et vin tout en profitant de la beauté de ses paysages.
             </p>

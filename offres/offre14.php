@@ -20,10 +20,10 @@
     <div class="container">
 
         <div class="description">
-            <p class="title">Séjour culinaire à Évora (Alentejo)</p>
-            <img src="../src/EvoraFood.jpg" alt="Evora Food">
+            <p class="title">Road trip gastronomique dans le Douro : Vins et spécialités du nord</p>
+            <img src="../src/offre14.jpg" alt="Douro Vins">
             <p>
-                Évora, une ville pleine de charme et d’histoire, vous invite à découvrir les saveurs authentiques du terroir alentejano. Profitez de ses viandes succulentes, de ses fromages et de ses vins tout en explorant ses monuments antiques.
+                Partez pour un voyage à travers les magnifiques paysages du Douro et dégustez les meilleurs vins et spécialités du nord du Portugal.
             </p>
         </div>
 
@@ -33,7 +33,7 @@
                 <p>3 nuits</p>
             </div>
             <div class="découverte"> <img src="../src/découverte.png" alt="icone découverte">
-                <p>3 découvertes culinaires</p>
+                <p>4 dégustations de vins et spécialités</p>
             </div>
             <div class="transport"> <img src="../src/transport.png" alt="icone transport">
                 <p>Transport inclus</p>
@@ -43,31 +43,29 @@
         <div class="parcours">
             <p class="title">Parcours</p>
             <ul>
-                <li>Jour 1: Arrivée à Évora et premier goût de la région
+                <li>Jour 1: Arrivée à Porto et immersion gastronomique
                     <ul>
-                        <li>Arrivée à Évora et installation</li>
-                        <li>Visite du marché de la ville et dégustation de fromages et charcuteries</li>
-                        <li>Dîner traditionnel avec "Porco Preto" (porc noir de l’Alentejo)</li>
+                        <li>Visite du centre historique et découverte de la Francesinha</li>
+                        <li>Dégustation de vins de Porto dans une cave</li>
                     </ul>
                 </li>
-                <li>Jour 2: Dégustation de vins et exploration des saveurs locales
+                <li>Jour 2: Excursion dans la vallée du Douro
                     <ul>
-                        <li>Visite d’un vignoble local avec dégustation de vins de l'Alentejo</li>
-                        <li>Déjeuner avec "Ensopado de Borrego" (ragoût d'agneau)</li>
-                        <li>Exploration des anciens moulins et visite d'une ferme traditionnelle</li>
+                        <li>Visite de vignobles et dégustation de vins du Douro</li>
+                        <li>Déjeuner traditionnel avec Cabrito Assado (chevreau rôti)</li>
                     </ul>
                 </li>
-                <li>Jour 3: Aventure culinaire et retour
+                <li>Jour 3: Randonnée et spécialités locales
                     <ul>
-                        <li>Participation à un atelier de cuisine pour apprendre à préparer des plats locaux</li>
-                        <li>Déjeuner de spécialités cuites sur des braises</li>
-                        <li>Retour à Évora et fin du séjour</li>
+                        <li>Balade le long du fleuve et dégustation de Queijo da Serra</li>
+                        <li>Dîner dans une quinta avec produits locaux</li>
                     </ul>
                 </li>
             </ul>
             <button>Réserver maintenant</button>
         </div>
     </div>
+
     <footer>
         <p>&copy; 2025 CY Portugal</p>
         <a href="../profil.php">Compte</a>

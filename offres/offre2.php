@@ -21,7 +21,7 @@
 
         <div class="description">
             <p class="title">Séjour gastronomique à Madère</p>
-            <img src="../src/MadeiraFood.webp" alt="Madeira Food">
+            <img src="../src/foodmadeira.jpg" alt="Madeira Food">
             <p>
                 Partez à la découverte de l’île de Madère, un véritable paradis pour les gourmands. Découvrez les fruits exotiques, les spécialités à base de poisson frais et goûtez aux délicieux gâteaux locaux dans un cadre tropical.
             </p>

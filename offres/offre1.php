@@ -21,7 +21,7 @@
 
         <div class="description">
             <p class="title">Voyage gastronomique à Porto</p>
-            <img src="../src/PortoFood.webp" alt="Porto Food">
+            <img src="../src/gastronomie Porto.jpg" alt="Porto Food">
             <p>
                 Partez à la découverte de Porto, une ville où les saveurs se mêlent aux traditions culinaires uniques du nord du Portugal. Dégustez le fameux Francesinha, les vins de Porto et explorez les marchés locaux pour une expérience authentique.
             </p>

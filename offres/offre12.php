@@ -21,7 +21,7 @@
 
         <div class="description">
             <p class="title">Week-end sucré à Lisbonne : Pâtisseries et douceurs portugaises</p>
-            <img src="../src/Patisseries.webp" alt="Pâtisseries Lisbonne">
+            <img src="../src/offre12.jpg" alt="Pâtisseries Lisbonne">
             <p>
                 Pour les amateurs de douceurs, ce week-end à Lisbonne vous plongera dans l’univers sucré du Portugal. Des célèbres Pasteis de Nata aux recettes moins connues, découvrez les meilleures pâtisseries de la ville.
             </p>

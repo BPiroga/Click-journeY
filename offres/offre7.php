@@ -21,7 +21,7 @@
 
         <div class="description">
             <p class="title">Séjour gastronomique à Porto : Saveurs du Nord</p>
-            <img src="../src/PortoFood.webp" alt="Porto Food">
+            <img src="../src/offre7.jpg" alt="Porto Food">
             <p>
                 Découvrez Porto à travers sa gastronomie unique ! De la Francesinha aux vins de la vallée du Douro, ce séjour vous fera explorer les spécialités de la ville et la richesse culinaire du nord du Portugal.
             </p>

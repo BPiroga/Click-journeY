@@ -21,7 +21,7 @@
 
         <div class="description">
             <p class="title">Aventure gastronomique en Algarve : Poissons et fruits de mer</p>
-            <img src="../src/AlgarveFood.webp" alt="Algarve Food">
+            <img src="../src/offre11.jpg" alt="Algarve Food">
             <p>
                 L’Algarve, terre de soleil et de saveurs marines, vous attend pour un séjour culinaire unique. Entre poissons grillés, fruits de mer et vins régionaux, plongez dans l’essence de la cuisine du sud du Portugal.
             </p>

@@ -1,0 +1,338 @@
+[
+    {
+        "id": 1,
+        "titre": "Découverte des vins de Porto",
+        "description": "Partez pour une escapade immersive au cœur des traditions viticoles portugaises...",
+        "ville": "Porto",
+        "type": "Vins",
+        "prix": 299,
+        "duree": 3,
+        "inclusions": {
+            "nuits": 2,
+            "découvertes_culinaires": 2,
+            "transport_inclus": true
+      },
+"options": ["Annulation gratuite", "Bagage inclus"],
+        "image": "src/Vin Porto.jpg"
+    },
+    {
+        "id": 2,
+        "titre": "Street food à Lisbonne",
+        "description": "Découvrez Lisbonne autrement à travers ses saveurs de rue authentiques...",
+        "ville": "Lisbonne",
+        "type": "Street Food",
+        "prix": 199,
+        "duree": 2,
+        "inclusions": {
+            "nuits": 2,
+            "découvertes_culinaires": 2,
+            "transport_inclus": true
+        },
+"options": ["Voyager avec des enfants", "Annulation gratuite"],
+        "image": "src/Street food.webp"
+    },
+    {
+        "id": 3,
+        "titre": "Voyage gastronomique à Porto",
+        "description": "Partez à la découverte de Porto, une ville où les saveurs se mêlent aux traditions culinaires...",
+        "ville": "Porto",
+        "type": "Gastronomie",
+        "prix": 379,
+        "duree": 3,
+        "inclusions": {
+            "nuits": 3,
+            "découvertes_culinaires": 3,
+            "transport_inclus": true
+        },
+"options": ["Vue sur la mer", "Annulation gratuite"],
+        "image": "src/gastronomie Porto.jpg"
+    },
+    {
+        "id": 4,
+        "titre": "Séjour culinaire dans l'Alentejœnologique et gastronomique    "dea vallée du Douro": "Explorez l'Alentejo, une région dua célèbre valléeaditDouro, terre de vignobles
+   de saveurs authentiques"Alentejo",
+        "typDourotronomie",
+        "Vins
+        "duree": 3171        "inclusions": {
+            "nuits": 3,
+            "découvertes_culinaires": 3,
+            "transpo4t_inclus": true
+        },
+"options": ["Bagage inclus", "Annulation gratuite"],
+        "image": "src/offre9.jpg"
+    },
+    {
+        "id": 5,
+        "titre": "Séjour culinaire à Faro (Algarve)",
+        "description": "Découvrez Faro, une ville ensoleillée de l'Algarve, riche en traditions culinaires...",
+        "ville": "Faro",
+        "type": "Gastronomie",
+        "prix": 399,
+        "duree": 3,
+        "inclusions": {
+            "nuits": 3,
+            "découvertes_culinaires": 3,
+            "transport_inclus": true
+        },
+        "image": "src/algarve.jpg"
+    },
+    {
+        "id": 6,
+        "titre": "Séjour gastronomique à Sintra",
+        "description": "Partez à la découverte de Sintra, une ville magique au cœur des montagnes...",
+        "ville": "Sintra",
+        "type": "Gastronomie",
+        "prix": 134,
+        "duree": 2,
+        "inclusions": {
+            "nuits": 2,
+            "découvertes_culinaires": 2,
+            "transport_inclus": true
+        },
+        "image": "src/SintraFood.jpg"
+    },
+    {
+        "id": 7,
+        "titre": "Road trip gourmand à Madère",
+        "description": "Partez à la découverte de Madère, une île exotique aux saveurs inoubliables...",
+        "ville": "Madère",
+        "type": "Gastronomie",
+        "prix": 411,
+        "duree": 4,
+        "inclusions": {
+            "nuits": 4,
+            "découvertes_culinaires": 5,
+            "transport_inclus": true
+        },
+        "image": "src/offre8.jpg"
+    },
+    {
+        "id": 8,
+        "titre": "Week-end sucré à Lisbonne",
+        "description": "Pour les amateurs de douceurs, ce week-end à Lisbonne vous plongera dans l’univers sucré...",
+        "ville": "Lisbonne",
+        "type": "Pâtisseries",
+        "prix": 182,
+        "duree": 2,
+        "inclusions": {
+            "nuits": 2,
+            "découvertes_culinaires": 3,
+            "transport_inclus": true
+        },
+        "image": "src/offre12.jpg"
+    },
+    }
+ ]  
+
+[
+    {
+        "id": 1,
+        "titre": "Découverte des vins de Porto",
+        "description": "Partez pour une escapade immersive au cœur des traditions viticoles portugaises...",
+        "ville": "Porto",
+        "type": "Vins",
+        "prix": 299,
+        "duree": 3,
+        "inclusions": {
+            "nuits": 2,
+            "découvertes_culinaires": 2,
+            "transport_inclus": true
+        },
+        "image": "src/Vin Porto.jpg"
+    },
+    {
+        "id": 2,
+        "titre": "Street food à Lisbonne",
+        "description": "Découvrez Lisbonne autrement à travers ses saveurs de rue authentiques...",
+        "ville": "Lisbonne",
+        "type": "Street Food",
+        "prix": 199,
+        "duree": 2,
+        "inclusions": {
+            "nuits": 2,
+            "découvertes_culinaires": 2,
+            "transport_inclus": true
+        },
+        "image": "src/Street food.webp"
+    },
+    {
+        "id": 3,
+        "titre": "Voyage gastronomique à Porto",
+        "description": "Partez à la découverte de Porto, une ville où les saveurs se mêlent aux traditions culinaires...",
+        "ville": "Porto",
+        "type": "Gastronomie",
+        "prix": 379,
+        "duree": 3,
+        "inclusions": {
+            "nuits": 3,
+            "découvertes_culinaires": 3,
+            "transport_inclus": true
+        },
+        "image": "src/gastronomie Porto.jpg"
+    },
+    {
+        "id": 4,
+        "titre": "Séjour culinaire dans l'Alentejo",
+        "description": "Explorez l'Alentejo, une région du Portugal riche en traditions agricoles et gastronomiques...",
+        "ville": "Alentejo",
+        "type": "Gastronomie",
+        "prix": 169,
+        "duree": 3,
+        "inclusions": {
+            "nuits": 3,
+            "découvertes_culinaires": 3,
+            "transport_inclus": true
+        },
+        "image": "src/AlentejoFood.jpg"
+    },
+    {
+        "id": 5,
+        "titre": "Séjour culinaire à Faro (Algarve)",
+        "description": "Découvrez Faro, une ville ensoleillée de l'Algarve, riche en traditions culinaires...",
+        "ville": "Faro",
+        "type": "Gastronomie",
+        "prix": 399,
+        "duree": 3,
+        "inclusions": {
+            "nuits": 3,
+            "découvertes_culinaires": 3,
+            "transport_inclus": true
+        },
+        "image": "src/algarve.jpg"
+    },
+    {
+        "id": 6,
+        "titre": "Séjour gastronomique à Sintra",
+        "description": "Partez à la découverte de Sintra, une ville magique au cœur des montagnes...",
+        "ville": "Sintra",
+        "type": "Gastronomie",
+        "prix": 134,
+        "duree": 2,
+        "inclusions": {
+            "nuits": 2,
+            "découvertes_culinaires": 2,
+            "transport_inclus": true
+        },
+        "image": "src/SintraFood.jpg"
+    },
+    {
+        "id": 7,
+        "titre": "Road trip gourmand à Madère",
+        "description": "Partez à la découverte de Madère, une île exotique aux saveurs inoubliables...",
+        "ville": "Madère",
+        "type": "Gastronomie",
+        "prix": 411,
+        "duree": 4,
+        "inclusions": {
+            "nuits": 4,
+            "découvertes_culinaires": 5,
+            "transport_inclus": true
+        },
+        "image": "src/offre8.jpg"
+    },
+    {
+        "id": 8,
+        "titre": "Week-end sucré à Lisbonne",
+        "description": "Pour les amateurs de douceurs, ce week-end à Lisbonne vous plongera dans l’univers sucré...",
+        "ville": "Lisbonne",
+        "type": "Pâtisseries",
+        "prix": 182,
+        "duree": 2,
+        "inclusions": {
+            "nuits": 2,
+            "découvertes_culinaires": 3,
+            "transport_inclus": true
+        },
+        "image": "src/offre12.jpg"
+    },
+    {
+        "id": 9,
+        "titre": "Séjour œnologique et gastronomique dans la vallée du Douro",
+        "description": "Explorez la célèbre vallée du Douro, terre de vignobles et de saveurs authentiques...",
+        "ville": "Douro",
+        "type": "Vins",
+        "prix": 171,
+        "duree": 3,
+        "inclusions": {
+            "nuits": 3,
+            "découvertes_culinaires": 4,
+            "transport_inclus": true
+        },
+        "image": "src/offre9.jpg"
+    },
+    {
+        "id": 10,
+        "titre": "Expérience culinaire et fado à Lisbonne",
+        "description": "Imprégnez-vous de l'âme de Lisbonne à travers un voyage entre saveurs et musique...",
+        "ville": "Lisbonne",
+        "type": "Gastronomie",
+        "prix": 252,
+        "duree": 3,
+        "inclusions": {
+            "nuits": 3,
+            "découvertes_culinaires": 3,
+            "transport_inclus": true
+        },
+        "image": "src/offre10.jpg"
+    },
+    {
+        "id": 11,
+        "titre": "Aventure gastronomique en Algarve : Poissons et fruits de mer",
+        "description": "L’Algarve, terre de soleil et de saveurs marines, vous attend pour un séjour culinaire unique...",
+        "ville": "Algarve",
+        "type": "Gastronomie",
+        "prix": 422,
+        "duree": 4,
+        "inclusions": {
+            "nuits": 4,
+            "découvertes_culinaires": 5,
+            "transport_inclus": true
+        },
+        "image": "src/offre11.jpg"
+    },
+    {
+        "id": 12,
+        "titre": "Week-end sucré à Lisbonne : Pâtisseries et douceurs portugaises",
+        "description": "Pour les amateurs de douceurs, ce week-end à Lisbonne vous plongera dans l’univers sucré...",
+        "ville": "Lisbonne",
+        "type": "Pâtisseries",
+        "prix": 182,
+        "duree": 2,
+        "inclusions": {
+            "nuits": 2,
+            "découvertes_culinaires": 3,
+            "transport_inclus": true
+        },
+        "image": "src/offre12.jpg"
+    },
+    {
+        "id": 13,
+        "titre": "Découverte des street food à Lisbonne",
+        "description": "Découvrez Lisbonne autrement à travers ses saveurs de rue authentiques et gourmandes...",
+        "ville": "Lisbonne",
+        "type": "Street Food",
+        "prix": 199,
+        "duree": 2,
+        "inclusions": {
+            "nuits": 2,
+            "découvertes_culinaires": 2,
+            "transport_inclus": true
+        },
+        "image": "src/Street food.webp"
+    },
+    {
+        "id": 14,
+        "titre": "Road trip gastronomique dans le Douro : Vins et spécialités du nord",
+        "description": "Partez pour un voyage à travers les magnifiques paysages du Douro et dégustez les meilleurs vins...",
+        "ville": "Douro",
+        "type": "Vins",
+        "prix": 242,
+        "duree": 3,
+        "inclusions": {
+            "nuits": 3,
+            "découvertes_culinaires": 4,
+            "transport_inclus": true
+        },
+        "image": "src/offre14.jpg"
+    }
+]
