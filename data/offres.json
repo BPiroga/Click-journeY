@@ -1,132 +1,22 @@
 [
     {
         "id": 1,
-        "titre": "Découverte des vins de Porto",
-        "description": "Partez pour une escapade immersive au cœur des traditions viticoles portugaises...",
-        "ville": "Porto",
-        "type": "Vins",
-        "prix": 299,
-        "duree": 3,
-        "inclusions": {
-            "nuits": 2,
-            "découvertes_culinaires": 2,
-            "transport_inclus": true
-      },
-"options": ["Annulation gratuite", "Bagage inclus"],
-        "image": "src/Vin Porto.jpg"
-    },
-    {
-        "id": 2,
-        "titre": "Street food à Lisbonne",
-        "description": "Découvrez Lisbonne autrement à travers ses saveurs de rue authentiques...",
-        "ville": "Lisbonne",
-        "type": "Street Food",
-        "prix": 199,
-        "duree": 2,
-        "inclusions": {
-            "nuits": 2,
-            "découvertes_culinaires": 2,
-            "transport_inclus": true
-        },
-"options": ["Voyager avec des enfants", "Annulation gratuite"],
-        "image": "src/Street food.webp"
-    },
-    {
-        "id": 3,
-        "titre": "Voyage gastronomique à Porto",
-        "description": "Partez à la découverte de Porto, une ville où les saveurs se mêlent aux traditions culinaires...",
-        "ville": "Porto",
-        "type": "Gastronomie",
-        "prix": 379,
-        "duree": 3,
-        "inclusions": {
-            "nuits": 3,
-            "découvertes_culinaires": 3,
-            "transport_inclus": true
-        },
-"options": ["Vue sur la mer", "Annulation gratuite"],
-        "image": "src/gastronomie Porto.jpg"
-    },
-    {
-        "id": 4,
-        "titre": "Séjour culinaire dans l'Alentejœnologique et gastronomique    "dea vallée du Douro": "Explorez l'Alentejo, une région dua célèbre valléeaditDouro, terre de vignobles
-   de saveurs authentiques"Alentejo",
-        "typDourotronomie",
-        "Vins
-        "duree": 3171        "inclusions": {
-            "nuits": 3,
-            "découvertes_culinaires": 3,
-            "transpo4t_inclus": true
-        },
-"options": ["Bagage inclus", "Annulation gratuite"],
-        "image": "src/offre9.jpg"
-    },
-    {
-        "id": 5,
-        "titre": "Séjour culinaire à Faro (Algarve)",
-        "description": "Découvrez Faro, une ville ensoleillée de l'Algarve, riche en traditions culinaires...",
-        "ville": "Faro",
-        "type": "Gastronomie",
-        "prix": 399,
-        "duree": 3,
-        "inclusions": {
-            "nuits": 3,
-            "découvertes_culinaires": 3,
-            "transport_inclus": true
-        },
-        "image": "src/algarve.jpg"
-    },
-    {
-        "id": 6,
-        "titre": "Séjour gastronomique à Sintra",
-        "description": "Partez à la découverte de Sintra, une ville magique au cœur des montagnes...",
-        "ville": "Sintra",
-        "type": "Gastronomie",
-        "prix": 134,
-        "duree": 2,
-        "inclusions": {
-            "nuits": 2,
-            "découvertes_culinaires": 2,
-            "transport_inclus": true
-        },
-        "image": "src/SintraFood.jpg"
-    },
-    {
-        "id": 7,
-        "titre": "Road trip gourmand à Madère",
-        "description": "Partez à la découverte de Madère, une île exotique aux saveurs inoubliables...",
+        "titre": "Séjour gastronomique à Madère",
+        "description": "Partez à la découverte de l’île de Madère, un véritable paradis pour les gourmands. Découvrez les fruits exotiques, les spécialités à base de poisson frais et goûtez aux délicieux gâteaux locaux dans un cadre tropical.",
         "ville": "Madère",
         "type": "Gastronomie",
-        "prix": 411,
+        "prix": 299,
         "duree": 4,
         "inclusions": {
             "nuits": 4,
-            "découvertes_culinaires": 5,
+            "découvertes_culinaires": 4,
             "transport_inclus": true
         },
-        "image": "src/offre8.jpg"
+        "options": ["Bagage inclus", "Annulation gratuite"],
+        "image": "src/foodmadeira.jpg"
     },
     {
-        "id": 8,
-        "titre": "Week-end sucré à Lisbonne",
-        "description": "Pour les amateurs de douceurs, ce week-end à Lisbonne vous plongera dans l’univers sucré...",
-        "ville": "Lisbonne",
-        "type": "Pâtisseries",
-        "prix": 182,
-        "duree": 2,
-        "inclusions": {
-            "nuits": 2,
-            "découvertes_culinaires": 3,
-            "transport_inclus": true
-        },
-        "image": "src/offre12.jpg"
-    },
-    }
- ]  
-
-[
-    {
-        "id": 1,
+        "id": 2,
         "titre": "Découverte des vins de Porto",
         "description": "Partez pour une escapade immersive au cœur des traditions viticoles portugaises...",
         "ville": "Porto",
@@ -138,25 +28,27 @@
             "découvertes_culinaires": 2,
             "transport_inclus": true
         },
+        "options": ["Bagage inclus", "Annulation gratuite"],
         "image": "src/Vin Porto.jpg"
     },
     {
-        "id": 2,
-        "titre": "Street food à Lisbonne",
-        "description": "Découvrez Lisbonne autrement à travers ses saveurs de rue authentiques...",
-        "ville": "Lisbonne",
-        "type": "Street Food",
+        "id": 3,
+        "titre": "Séjour culinaire à Évora (Alentejo)",
+        "description": "Évora, une ville pleine de charme et d’histoire, vous invite à découvrir les saveurs authentiques du terroir alentejano. Profitez de ses viandes succulentes, de ses fromages et de ses vins tout en explorant ses monuments antiques.",
+        "ville": "Alentejo",
+        "type": "Gastronomie",
         "prix": 199,
-        "duree": 2,
+        "duree": 3,
         "inclusions": {
-            "nuits": 2,
-            "découvertes_culinaires": 2,
+            "nuits": 3,
+            "découvertes_culinaires": 3,
             "transport_inclus": true
         },
-        "image": "src/Street food.webp"
+        "options": ["Bagage inclus", "Annulation gratuite"],
+        "image": "src/EvoraFood.jpg"
     },
     {
-        "id": 3,
+        "id": 4,
         "titre": "Voyage gastronomique à Porto",
         "description": "Partez à la découverte de Porto, une ville où les saveurs se mêlent aux traditions culinaires...",
         "ville": "Porto",
@@ -168,25 +60,27 @@
             "découvertes_culinaires": 3,
             "transport_inclus": true
         },
+        "options": ["Bagage inclus", "Annulation gratuite"],
         "image": "src/gastronomie Porto.jpg"
     },
     {
-        "id": 4,
+        "id": 5,
         "titre": "Séjour culinaire dans l'Alentejo",
         "description": "Explorez l'Alentejo, une région du Portugal riche en traditions agricoles et gastronomiques...",
         "ville": "Alentejo",
         "type": "Gastronomie",
         "prix": 169,
         "duree": 3,
-        "inclusions": {
+        "inclusions": {             
             "nuits": 3,
             "découvertes_culinaires": 3,
             "transport_inclus": true
         },
+        "options": ["Voyager avec des enfants", "Annulation gratuite"],
         "image": "src/AlentejoFood.jpg"
     },
     {
-        "id": 5,
+        "id": 6,
         "titre": "Séjour culinaire à Faro (Algarve)",
         "description": "Découvrez Faro, une ville ensoleillée de l'Algarve, riche en traditions culinaires...",
         "ville": "Faro",
@@ -198,10 +92,11 @@
             "découvertes_culinaires": 3,
             "transport_inclus": true
         },
+        "options": ["Voyager avec des enfants", "Annulation gratuite"],
         "image": "src/algarve.jpg"
     },
     {
-        "id": 6,
+        "id": 7,
         "titre": "Séjour gastronomique à Sintra",
         "description": "Partez à la découverte de Sintra, une ville magique au cœur des montagnes...",
         "ville": "Sintra",
@@ -213,10 +108,11 @@
             "découvertes_culinaires": 2,
             "transport_inclus": true
         },
+        "options": ["Voyager avec des enfants", "Annulation gratuite"],
         "image": "src/SintraFood.jpg"
     },
     {
-        "id": 7,
+        "id": 8,
         "titre": "Road trip gourmand à Madère",
         "description": "Partez à la découverte de Madère, une île exotique aux saveurs inoubliables...",
         "ville": "Madère",
@@ -228,14 +124,15 @@
             "découvertes_culinaires": 5,
             "transport_inclus": true
         },
+        "options": ["Vue sur la mer", "Bagage inclus"],
         "image": "src/offre8.jpg"
     },
     {
-        "id": 8,
-        "titre": "Week-end sucré à Lisbonne",
-        "description": "Pour les amateurs de douceurs, ce week-end à Lisbonne vous plongera dans l’univers sucré...",
-        "ville": "Lisbonne",
-        "type": "Pâtisseries",
+        "id": 9,
+        "titre": "Séjour gastronomique à Porto : Saveurs du Nord",
+        "description": " Découvrez Porto à travers sa gastronomie unique ! De la Francesinha aux vins de la vallée du Douro, ce séjour vous fera explorer les spécialités de la ville et la richesse culinaire du nord du Portugal.",
+        "ville": "Porto",
+        "type": "Gastronomie",
         "prix": 182,
         "duree": 2,
         "inclusions": {
@@ -243,10 +140,11 @@
             "découvertes_culinaires": 3,
             "transport_inclus": true
         },
-        "image": "src/offre12.jpg"
+        "options": ["Bagage inclus", "Annulation gratuite"],
+        "image": "src/offre7.jpg"
     },
     {
-        "id": 9,
+        "id": 10,
         "titre": "Séjour œnologique et gastronomique dans la vallée du Douro",
         "description": "Explorez la célèbre vallée du Douro, terre de vignobles et de saveurs authentiques...",
         "ville": "Douro",
@@ -258,10 +156,11 @@
             "découvertes_culinaires": 4,
             "transport_inclus": true
         },
+        "options": ["Bagage inclus", "Annulation gratuite"],
         "image": "src/offre9.jpg"
     },
     {
-        "id": 10,
+        "id": 11,
         "titre": "Expérience culinaire et fado à Lisbonne",
         "description": "Imprégnez-vous de l'âme de Lisbonne à travers un voyage entre saveurs et musique...",
         "ville": "Lisbonne",
@@ -273,10 +172,11 @@
             "découvertes_culinaires": 3,
             "transport_inclus": true
         },
+        "options": ["Voyager avec des enfants", "Annulation gratuite"],
         "image": "src/offre10.jpg"
     },
     {
-        "id": 11,
+        "id": 12,
         "titre": "Aventure gastronomique en Algarve : Poissons et fruits de mer",
         "description": "L’Algarve, terre de soleil et de saveurs marines, vous attend pour un séjour culinaire unique...",
         "ville": "Algarve",
@@ -288,10 +188,11 @@
             "découvertes_culinaires": 5,
             "transport_inclus": true
         },
+        "options": ["Vue sur la mer", "Voyager avec des enfants"],
         "image": "src/offre11.jpg"
     },
     {
-        "id": 12,
+        "id": 13,
         "titre": "Week-end sucré à Lisbonne : Pâtisseries et douceurs portugaises",
         "description": "Pour les amateurs de douceurs, ce week-end à Lisbonne vous plongera dans l’univers sucré...",
         "ville": "Lisbonne",
@@ -303,10 +204,11 @@
             "découvertes_culinaires": 3,
             "transport_inclus": true
         },
+        "options": ["Bagage inclus", "Annulation gratuite"],
         "image": "src/offre12.jpg"
     },
     {
-        "id": 13,
+        "id": 14,
         "titre": "Découverte des street food à Lisbonne",
         "description": "Découvrez Lisbonne autrement à travers ses saveurs de rue authentiques et gourmandes...",
         "ville": "Lisbonne",
@@ -318,10 +220,11 @@
             "découvertes_culinaires": 2,
             "transport_inclus": true
         },
+        "options": ["Voyager avec des enfants", "Annulation gratuite"],
         "image": "src/Street food.webp"
     },
     {
-        "id": 14,
+        "id": 15,
         "titre": "Road trip gastronomique dans le Douro : Vins et spécialités du nord",
         "description": "Partez pour un voyage à travers les magnifiques paysages du Douro et dégustez les meilleurs vins...",
         "ville": "Douro",
@@ -333,6 +236,7 @@
             "découvertes_culinaires": 4,
             "transport_inclus": true
         },
+        "options": ["Bagage inclus", "Annulation gratuite"],
         "image": "src/offre14.jpg"
     }
 ]
