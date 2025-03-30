@@ -21,7 +21,7 @@
 
         <div class="description">
             <p class="title">Road trip gourmand à Madère</p>
-            <img src="../src/MadereFood.webp" alt="Madère Food">
+            <img src="../src/offre8.jpg" alt="Madère Food">
             <p>
                 Partez à la découverte de Madère, une île exotique aux saveurs inoubliables. Entre fruits tropicaux, poissons frais et plats traditionnels, vivez un voyage culinaire au cœur de l'Atlantique.
             </p>

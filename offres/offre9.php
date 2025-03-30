@@ -21,7 +21,7 @@
 
         <div class="description">
             <p class="title">Séjour œnologique et gastronomique dans la vallée du Douro</p>
-            <img src="../src/DouroFood.webp" alt="Douro Food">
+            <img src="../src/offre9.jpg" alt="Douro Food">
             <p>
                 Explorez la célèbre vallée du Douro, terre de vignobles et de saveurs authentiques. Entre dégustations de vins et spécialités régionales, ce séjour vous fera voyager au cœur du Portugal rural.
             </p>

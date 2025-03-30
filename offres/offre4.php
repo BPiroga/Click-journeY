@@ -21,7 +21,7 @@
 
         <div class="description">
             <p class="title">Séjour culinaire à Faro (Algarve)</p>
-            <img src="../src/FaroFood.webp" alt="Faro Food">
+            <img src="../src/algarve.jpg" alt="Faro Food">
             <p>
                 Découvrez Faro, une ville ensoleillée de l'Algarve, riche en traditions culinaires. Profitez de ses fruits de mer frais, de ses plats à base de riz et d'une découverte de ses marchés typiques pour une immersion totale.
             </p>

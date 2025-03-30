@@ -47,21 +47,21 @@
         <div class="parcours">
             <p class="title">Parcours</p>
             <ul>
-                <li>Jour 1: Porto et ses caves légendaires
+                <li>Jour 1 : Porto et ses caves légendaires
                     <ul>
                         <li>Arrivée à Porto et installation</li>
                         <li>Balade dans le quartier historique de Ribeira</li>
                         <li>Visite guidée d’une cave à Vila Nova de Gaia avec dégustation de Porto</li>
                     </ul>
                 </li>
-                <li>Jour 2: Excursion dans la Vallée du Douro 
+                <li>Jour 2 : Excursion dans la Vallée du Douro 
                     <ul>
                         <li>Croisière sur le fleuve Douro à travers les vignobles en terrasses</li>
                         <li>Déjeuner gastronomique avec accords mets-vins</li>
                         <li>Visite d’un domaine viticole et dégustation de grands crus</li>
                     </ul>
                 </li>
-                <li>Jour 3: Derniers plaisirs à Porto 
+                <li>Jour 3 : Derniers plaisirs à Porto 
                     <ul>
                         <li>Matinée libre pour explorer la ville</li>
                         <li>Dégustation de spécialités locales (Francesinha, bacalhau)</li>

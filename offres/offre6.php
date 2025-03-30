@@ -21,7 +21,7 @@
 
         <div class="description">
             <p class="title">Séjour gastronomique à Sintra</p>
-            <img src="../src/SintraFood.webp" alt="Sintra Food">
+            <img src="../src/SintraFood.jpg" alt="Sintra Food">
             <p>
                 Partez à la découverte de Sintra, une ville magique au cœur des montagnes, célèbre pour ses palais et ses pâtisseries. Profitez de ses saveurs traditionnelles, des douceurs comme le "Travesseiro" et l'incroyable paysage environnant.
             </p>

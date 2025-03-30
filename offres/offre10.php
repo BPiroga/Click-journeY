@@ -21,7 +21,7 @@
 
         <div class="description">
             <p class="title">Expérience culinaire et fado à Lisbonne</p>
-            <img src="../src/LisbonneFado.webp" alt="Lisbonne Fado">
+            <img src="../src/offre10.jpg" alt="Lisbonne Fado">
             <p>
                 Imprégnez-vous de l'âme de Lisbonne à travers un voyage entre saveurs et musique. Dégustez des plats traditionnels tout en écoutant du Fado dans des lieux emblématiques de la ville.
             </p>
