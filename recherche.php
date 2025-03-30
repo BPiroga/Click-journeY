@@ -4,45 +4,32 @@ require_once 'php/session_outils.php';
 $offresFile = 'data/offres.json';
 $offres = json_decode(file_get_contents($offresFile), true);
 
-
+// Récupération des critères de recherche
 $ville = isset($_GET['ville']) ? $_GET['ville'] : '';
 $type = isset($_GET['type']) ? $_GET['type'] : '';
 $prixMax = isset($_GET['prix_max']) ? (int)$_GET['prix_max'] : null;
 $dureeMin = isset($_GET['duree_min']) ? (int)$_GET['duree_min'] : null;
 
-
-$defaultOptions = [
-    "Voyager avec des enfants",
-    "Vue sur la mer",
-    "Annulation gratuite",
-    "Bagage inclus",
-    "Animaux autorisés"
-];
-
-
-$optionsFile = 'data/options.json';
-if (file_exists($optionsFile)) {
-    $options = json_decode(file_get_contents($optionsFile), true);
-} else {
-    $options = $defaultOptions;
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['new_option'])) {
-    $newOption = trim($_POST['new_option']);
-    if (!empty($newOption) && !in_array($newOption, $options)) {
-        $options[] = $newOption;
-        file_put_contents($optionsFile, json_encode($options, JSON_PRETTY_PRINT));
+// Extraction des options uniques depuis le fichier offres.json
+$options = [];
+foreach ($offres as $offre) {
+    if (isset($offre['options'])) {
+        $options = array_merge($options, $offre['options']);
     }
 }
+$options = array_unique($options); // Supprime les doublons
 
-
+// Récupération des options sélectionnées
 $selectedOptions = isset($_GET['options']) ? $_GET['options'] : [];
 
-$filteredOffres = array_filter($offres, function ($offre) use ($ville, $type, $prixMax, $dureeMin) {
+// Filtrage des offres en fonction des critères
+$filteredOffres = array_filter($offres, function ($offre) use ($ville, $type, $prixMax, $dureeMin, $selectedOptions) {
+    $matchesOptions = empty($selectedOptions) || (isset($offre['options']) && !array_diff($selectedOptions, $offre['options']));
     return (!$ville || $offre['ville'] === $ville) &&
            (!$type || $offre['type'] === $type) &&
            (!$prixMax || $offre['prix'] <= $prixMax) &&
-           (!$dureeMin || $offre['duree'] >= $dureeMin);
+           (!$dureeMin || $offre['duree'] >= $dureeMin) &&
+           $matchesOptions;
 });
 ?>
 <!DOCTYPE html>
@@ -85,7 +72,7 @@ $filteredOffres = array_filter($offres, function ($offre) use ($ville, $type, $p
             <div class="options">
                 <details class="options-details">
                     <summary class="options-btn">Options</summary>
-                    <?php foreach ($options as $index => $option): ?>
+                    <?php foreach ($options as $option): ?>
                         <label>
                             <input type="checkbox" name="options[]" value="<?= htmlspecialchars($option) ?>" 
                                 <?= in_array($option, $selectedOptions) ? 'checked' : '' ?>>
@@ -96,9 +83,6 @@ $filteredOffres = array_filter($offres, function ($offre) use ($ville, $type, $p
             </div>
             <button type="submit">Rechercher</button>
         </form>
-
-        
-       
 
         <div class="voyages">
             <?php if (empty($filteredOffres)): ?>

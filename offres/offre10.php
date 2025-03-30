@@ -20,10 +20,10 @@
     <div class="container">
 
         <div class="description">
-            <p class="title">Expérience culinaire et fado à Lisbonne</p>
-            <img src="../src/offre10.jpg" alt="Lisbonne Fado">
+            <p class="title">Séjour œnologique et gastronomique dans la vallée du Douro</p>
+            <img src="../src/offre9.jpg" alt="Douro Food">
             <p>
-                Imprégnez-vous de l'âme de Lisbonne à travers un voyage entre saveurs et musique. Dégustez des plats traditionnels tout en écoutant du Fado dans des lieux emblématiques de la ville.
+                Explorez la célèbre vallée du Douro, terre de vignobles et de saveurs authentiques. Entre dégustations de vins et spécialités régionales, ce séjour vous fera voyager au cœur du Portugal rural.
             </p>
         </div>
 
@@ -33,7 +33,7 @@
                 <p>3 nuits</p>
             </div>
             <div class="découverte"> <img src="../src/découverte.png" alt="icone découverte">
-                <p>3 expériences culinaires et musicales</p>
+                <p>4 dégustations de vins</p>
             </div>
             <div class="transport"> <img src="../src/transport.png" alt="icone transport">
                 <p>Transport inclus</p>
@@ -43,27 +43,9 @@
         <div class="parcours">
             <p class="title">Parcours</p>
             <ul>
-                <li>Jour 1: Arrivée et premiers plaisirs gustatifs
-                    <ul>
-                        <li>Installation et découverte du quartier de Bairro Alto</li>
-                        <li>Dîner avec dégustation de Bacalhau à Brás</li>
-                        <li>Soirée Fado dans une taverne historique</li>
-                    </ul>
-                </li>
-                <li>Jour 2: Entre saveurs et traditions
-                    <ul>
-                        <li>Visite du marché Time Out et dégustations de spécialités locales</li>
-                        <li>Cours de cuisine pour apprendre à préparer des Pasteis de Nata</li>
-                        <li>Dîner spectacle avec Fado et vin portugais</li>
-                    </ul>
-                </li>
-                <li>Jour 3: Balade et dernières découvertes
-                    <ul>
-                        <li>Brunch typique avec café et Torradas</li>
-                        <li>Découverte du quartier de l’Alfama et ses restaurants familiaux</li>
-                        <li>Retour en fin d’après-midi</li>
-                    </ul>
-                </li>
+                <li>Jour 1: Visite de caves et dégustation de Porto</li>
+                <li>Jour 2: Journée dans un domaine viticole avec déjeuner gastronomique</li>
+                <li>Jour 3: Croisière sur le Douro et dégustation de vins rouges locaux</li>
             </ul>
             <button>Réserver maintenant</button>
         </div>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../style.css">
     <title>CY Portugal</title>
 </head>
+
 <body>
     <header class="navbar">
         <a class="logo" href="../index.php"><img src="../src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
@@ -20,20 +21,20 @@
     <div class="container">
 
         <div class="description">
-            <p class="title">Road trip gastronomique dans le Douro : Vins et spécialités du nord</p>
-            <img src="../src/offre14.jpg" alt="Douro Vins">
+            <p class="title">Découverte des street food à Lisbonne</p>
+            <img src="../src/Street food.webp" alt="Street food">
             <p>
-                Partez pour un voyage à travers les magnifiques paysages du Douro et dégustez les meilleurs vins et spécialités du nord du Portugal.
+                Découvrez Lisbonne autrement à travers ses saveurs de rue authentiques et gourmandes ! Ce séjour vous plongera dans l’ambiance vibrante des marchés, des quartiers animés et des meilleurs spots de street food de la capitale portugaise.
             </p>
         </div>
 
         <div id="resumer">
             <p>Ce qui est inclus dans le circuit</p>
-            <div class="nbrnuit"> <img src="../src/nuit.png" alt="icone nuit">
-                <p>3 nuits</p>
+            <div class="nbrnuit"> <img src="../src/nuit.png"alt="icone nuit">
+                <p>2 nuits</p>
             </div>
             <div class="découverte"> <img src="../src/découverte.png" alt="icone découverte">
-                <p>4 dégustations de vins et spécialités</p>
+                <p>2 découvertes culinaires</p>
             </div>
             <div class="transport"> <img src="../src/transport.png" alt="icone transport">
                 <p>Transport inclus</p>
@@ -43,29 +44,27 @@
         <div class="parcours">
             <p class="title">Parcours</p>
             <ul>
-                <li>Jour 1: Arrivée à Porto et immersion gastronomique
+                <li>Jour 1: Saveurs locales et quartiers emblématiques
                     <ul>
-                        <li>Visite du centre historique et découverte de la Francesinha</li>
-                        <li>Dégustation de vins de Porto dans une cave</li>
+                        <li>Arrivée à Lisbonne et installation</li>
+                        <li>Visite du quartier de l’Alfama et découverte des spécialités locales</li>
+                        <li>Dégustation de Bifana (sandwich de porc mariné) et de Pasteis de Bacalhau</li>
+                        <li>Dîner dans un marché gastronomique</li>
                     </ul>
                 </li>
-                <li>Jour 2: Excursion dans la vallée du Douro
+                <li>Jour 2: Marchés et gourmandises de rue
                     <ul>
-                        <li>Visite de vignobles et dégustation de vins du Douro</li>
-                        <li>Déjeuner traditionnel avec Cabrito Assado (chevreau rôti)</li>
-                    </ul>
-                </li>
-                <li>Jour 3: Randonnée et spécialités locales
-                    <ul>
-                        <li>Balade le long du fleuve et dégustation de Queijo da Serra</li>
-                        <li>Dîner dans une quinta avec produits locaux</li>
+                        <li>Balade au Mercado de Campo de Ourique et dégustation de spécialités régionales</li>
+                        <li>Déjeuner sur le pouce avec une Tosta Mista et un verre de Ginjinha</li>
+                        <li>Découverte des secrets du Pastel de Nata dans une pâtisserie emblématique</li>
+                        <li>Après-midi libre pour explorer la ville</li>
+                        <li>Fin du séjour et retour</li>
                     </ul>
                 </li>
             </ul>
             <button>Réserver maintenant</button>
         </div>
     </div>
-
     <footer>
         <p>&copy; 2025 CY Portugal</p>
         <a href="../profil.php">Compte</a>

@@ -20,10 +20,10 @@
     <div class="container">
 
         <div class="description">
-            <p class="title">Séjour culinaire à Évora (Alentejo)</p>
-            <img src="../src/EvoraFood.jpg" alt="Evora Food">
+            <p class="title">Séjour culinaire dans l'Alentejo</p>
+            <img src="../src/AlentejoFood.jpg" alt="Alentejo Food">
             <p>
-                Évora, une ville pleine de charme et d’histoire, vous invite à découvrir les saveurs authentiques du terroir alentejano. Profitez de ses viandes succulentes, de ses fromages et de ses vins tout en explorant ses monuments antiques.
+                Explorez l'Alentejo, une région du Portugal riche en traditions agricoles et gastronomiques. Partez à la découverte de ses spécialités à base de viande, fromage et vin tout en profitant de la beauté de ses paysages.
             </p>
         </div>
 
@@ -43,25 +43,25 @@
         <div class="parcours">
             <p class="title">Parcours</p>
             <ul>
-                <li>Jour 1: Arrivée à Évora et premier goût de la région
+                <li>Jour 1: Découverte des marchés de l'Alentejo
                     <ul>
-                        <li>Arrivée à Évora et installation</li>
-                        <li>Visite du marché de la ville et dégustation de fromages et charcuteries</li>
-                        <li>Dîner traditionnel avec "Porco Preto" (porc noir de l’Alentejo)</li>
+                        <li>Arrivée dans la région et installation dans une auberge traditionnelle</li>
+                        <li>Visite d’un marché local et dégustation de produits artisanaux</li>
+                        <li>Déjeuner avec un ragoût de viande accompagné de pain de maïs</li>
                     </ul>
                 </li>
-                <li>Jour 2: Dégustation de vins et exploration des saveurs locales
+                <li>Jour 2: Dégustation de vin et spécialités fromagères
                     <ul>
-                        <li>Visite d’un vignoble local avec dégustation de vins de l'Alentejo</li>
-                        <li>Déjeuner avec "Ensopado de Borrego" (ragoût d'agneau)</li>
-                        <li>Exploration des anciens moulins et visite d'une ferme traditionnelle</li>
+                        <li>Visite d’une cave à vin de l'Alentejo et dégustation de vins locaux</li>
+                        <li>Déjeuner dans une ferme traditionnelle avec fromage artisanal et charcuterie</li>
+                        <li>Promenade dans les collines pour découvrir la production locale</li>
                     </ul>
                 </li>
-                <li>Jour 3: Aventure culinaire et retour
+                <li>Jour 3: Cuisine traditionnelle et patrimoine
                     <ul>
-                        <li>Participation à un atelier de cuisine pour apprendre à préparer des plats locaux</li>
-                        <li>Déjeuner de spécialités cuites sur des braises</li>
-                        <li>Retour à Évora et fin du séjour</li>
+                        <li>Cours de cuisine pour apprendre à préparer des plats typiques de l'Alentejo</li>
+                        <li>Dîner avec les plats préparés lors du cours</li>
+                        <li>Retour le lendemain matin</li>
                     </ul>
                 </li>
             </ul>

@@ -1,3 +1,4 @@
+<?php require_once '../php/session_outils.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../style.css">
     <title>CY Portugal</title>
 </head>
+
 <body>
     <header class="navbar">
         <a class="logo" href="../index.php"><img src="../src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
@@ -14,26 +16,28 @@
         <div class="navlinks">
             <a href="../presentation.php">Présentation</a>
             <a href="../recherche.php">Recherche</a>
-            <a href="../connexion.php" class="loginbtn">Se connecter</a>
+            <?php renderAuthLinks($isLoggedIn); ?>
         </div>
     </header>
     <div class="container">
 
         <div class="description">
-            <p class="title">Séjour gastronomique à Madère</p>
-            <img src="../src/foodmadeira.jpg" alt="Madeira Food">
+            <p class="title">Découverte des vins de Porto</p>
+            <img src="../src/Vin Porto.jpg" alt="Vin Porto">
             <p>
-                Partez à la découverte de l’île de Madère, un véritable paradis pour les gourmands. Découvrez les fruits exotiques, les spécialités à base de poisson frais et goûtez aux délicieux gâteaux locaux dans un cadre tropical.
+                    Partez pour une escapade immersive au cœur des traditions viticoles portugaises et laissez-vous envoûter
+                    par les saveurs de Porto et du Douro ! Entre visites de caves, dégustations de vins d’exception et
+                    paysages à couper le souffle, ce séjour est une invitation à la gourmandise et à la détente.
             </p>
         </div>
 
         <div id="resumer">
             <p>Ce qui est inclus dans le circuit</p>
             <div class="nbrnuit"> <img src="../src/nuit.png" alt="icone nuit">
-                <p>4 nuits</p>
+                <p>2 nuits</p>
             </div>
             <div class="découverte"> <img src="../src/découverte.png" alt="icone découverte">
-                <p>4 découvertes culinaires</p>
+                <p>2 découvertes culinaires</p>
             </div>
             <div class="transport"> <img src="../src/transport.png" alt="icone transport">
                 <p>Transport inclus</p>
@@ -43,25 +47,25 @@
         <div class="parcours">
             <p class="title">Parcours</p>
             <ul>
-                <li>Jour 1: Arrivée à Madère et exploration de Funchal
+                <li>Jour 1 : Porto et ses caves légendaires
                     <ul>
-                        <li>Arrivée à Funchal et installation à l’hôtel</li>
-                        <li>Découverte des marchés locaux et dégustation de fruits tropicaux</li>
-                        <li>Visite d’un restaurant local servant la spécialité de poisson grillé</li>
+                        <li>Arrivée à Porto et installation</li>
+                        <li>Balade dans le quartier historique de Ribeira</li>
+                        <li>Visite guidée d’une cave à Vila Nova de Gaia avec dégustation de Porto</li>
                     </ul>
                 </li>
-                <li>Jour 2: Dégustation et traditions culinaires
+                <li>Jour 2 : Excursion dans la Vallée du Douro 
                     <ul>
-                        <li>Visite d’une plantation de canne à sucre et dégustation de produits à base de sucre de canne</li>
-                        <li>Déjeuner traditionnel avec un plat à base de viande de porc</li>
-                        <li>Dîner dans une taverne madérienne</li>
+                        <li>Croisière sur le fleuve Douro à travers les vignobles en terrasses</li>
+                        <li>Déjeuner gastronomique avec accords mets-vins</li>
+                        <li>Visite d’un domaine viticole et dégustation de grands crus</li>
                     </ul>
                 </li>
-                <li>Jour 3: Aventure gourmande dans les montagnes
+                <li>Jour 3 : Derniers plaisirs à Porto 
                     <ul>
-                        <li>Randonnée dans les montagnes avec arrêt pour déguster des spécialités locales</li>
-                        <li>Retour à Funchal et exploration des pâtisseries locales</li>
-                        <li>Dîner avec des produits frais de la mer</li>
+                        <li>Matinée libre pour explorer la ville</li>
+                        <li>Dégustation de spécialités locales (Francesinha, bacalhau)</li>
+                        <li>Retour en fin de journée</li>
                     </ul>
                 </li>
             </ul>

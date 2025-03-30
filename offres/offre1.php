@@ -20,20 +20,20 @@
     <div class="container">
 
         <div class="description">
-            <p class="title">Voyage gastronomique à Porto</p>
-            <img src="../src/gastronomie Porto.jpg" alt="Porto Food">
+            <p class="title">Séjour gastronomique à Madère</p>
+            <img src="../src/foodmadeira.jpg" alt="Madeira Food">
             <p>
-                Partez à la découverte de Porto, une ville où les saveurs se mêlent aux traditions culinaires uniques du nord du Portugal. Dégustez le fameux Francesinha, les vins de Porto et explorez les marchés locaux pour une expérience authentique.
+                Partez à la découverte de l’île de Madère, un véritable paradis pour les gourmands. Découvrez les fruits exotiques, les spécialités à base de poisson frais et goûtez aux délicieux gâteaux locaux dans un cadre tropical.
             </p>
         </div>
 
         <div id="resumer">
             <p>Ce qui est inclus dans le circuit</p>
             <div class="nbrnuit"> <img src="../src/nuit.png" alt="icone nuit">
-                <p>3 nuits</p>
+                <p>4 nuits</p>
             </div>
             <div class="découverte"> <img src="../src/découverte.png" alt="icone découverte">
-                <p>3 découvertes culinaires</p>
+                <p>4 découvertes culinaires</p>
             </div>
             <div class="transport"> <img src="../src/transport.png" alt="icone transport">
                 <p>Transport inclus</p>
@@ -43,25 +43,25 @@
         <div class="parcours">
             <p class="title">Parcours</p>
             <ul>
-                <li>Jour 1: Arrivée à Porto et premières dégustations
+                <li>Jour 1: Arrivée à Madère et exploration de Funchal
                     <ul>
-                        <li>Arrivée à Porto et installation</li>
-                        <li>Dégustation de l’iconique Francesinha</li>
-                        <li>Visite d’un marché local et découverte des produits typiques</li>
+                        <li>Arrivée à Funchal et installation à l’hôtel</li>
+                        <li>Découverte des marchés locaux et dégustation de fruits tropicaux</li>
+                        <li>Visite d’un restaurant local servant la spécialité de poisson grillé</li>
                     </ul>
                 </li>
-                <li>Jour 2: Vins de Porto et spécialités régionales
+                <li>Jour 2: Dégustation et traditions culinaires
                     <ul>
-                        <li>Visite d’une cave à vin de Porto et dégustation</li>
-                        <li>Déjeuner avec une assiette de Bacalhau à la mode portugaise</li>
-                        <li>Découverte des spécialités sucrées de la ville</li>
+                        <li>Visite d’une plantation de canne à sucre et dégustation de produits à base de sucre de canne</li>
+                        <li>Déjeuner traditionnel avec un plat à base de viande de porc</li>
+                        <li>Dîner dans une taverne madérienne</li>
                     </ul>
                 </li>
-                <li>Jour 3: Exploration des rives du Douro
+                <li>Jour 3: Aventure gourmande dans les montagnes
                     <ul>
-                        <li>Promenade sur les rives du Douro et déjeuner avec vue sur le fleuve</li>
-                        <li>Dîner gastronomique dans un restaurant typique de la ville</li>
-                        <li>Retour en soirée</li>
+                        <li>Randonnée dans les montagnes avec arrêt pour déguster des spécialités locales</li>
+                        <li>Retour à Funchal et exploration des pâtisseries locales</li>
+                        <li>Dîner avec des produits frais de la mer</li>
                     </ul>
                 </li>
             </ul>

@@ -12,7 +12,7 @@
             "découvertes_culinaires": 4,
             "transport_inclus": true
         },
-        "options": ["Bagage inclus", "Annulation gratuite"],
+        "options": ["Bagage inclus", "Annulation gratuite", "Animaux autorisés"],
         "image": "src/foodmadeira.jpg"
     },
     {
@@ -76,7 +76,7 @@
             "découvertes_culinaires": 3,
             "transport_inclus": true
         },
-        "options": ["Voyager avec des enfants", "Annulation gratuite"],
+        "options": ["Voyager avec des enfants", "Annulation gratuite", "Animaux autorisés"],
         "image": "src/AlentejoFood.jpg"
     },
     {
@@ -108,7 +108,7 @@
             "découvertes_culinaires": 2,
             "transport_inclus": true
         },
-        "options": ["Voyager avec des enfants", "Annulation gratuite"],
+        "options": ["Voyager avec des enfants", "Annulation gratuite", "Animaux autorisés"],
         "image": "src/SintraFood.jpg"
     },
     {
@@ -188,7 +188,7 @@
             "découvertes_culinaires": 5,
             "transport_inclus": true
         },
-        "options": ["Vue sur la mer", "Voyager avec des enfants"],
+        "options": ["Vue sur la mer", "Voyager avec des enfants", "Animaux autorisés"],
         "image": "src/offre11.jpg"
     },
     {

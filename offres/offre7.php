@@ -20,10 +20,10 @@
     <div class="container">
 
         <div class="description">
-            <p class="title">Séjour gastronomique à Porto : Saveurs du Nord</p>
-            <img src="../src/offre7.jpg" alt="Porto Food">
+            <p class="title">Séjour gastronomique à Sintra</p>
+            <img src="../src/SintraFood.jpg" alt="Sintra Food">
             <p>
-                Découvrez Porto à travers sa gastronomie unique ! De la Francesinha aux vins de la vallée du Douro, ce séjour vous fera explorer les spécialités de la ville et la richesse culinaire du nord du Portugal.
+                Partez à la découverte de Sintra, une ville magique au cœur des montagnes, célèbre pour ses palais et ses pâtisseries. Profitez de ses saveurs traditionnelles, des douceurs comme le "Travesseiro" et l'incroyable paysage environnant.
             </p>
         </div>
 
@@ -33,7 +33,7 @@
                 <p>2 nuits</p>
             </div>
             <div class="découverte"> <img src="../src/découverte.png" alt="icone découverte">
-                <p>3 découvertes culinaires</p>
+                <p>2 découvertes culinaires</p>
             </div>
             <div class="transport"> <img src="../src/transport.png" alt="icone transport">
                 <p>Transport inclus</p>
@@ -43,19 +43,18 @@
         <div class="parcours">
             <p class="title">Parcours</p>
             <ul>
-                <li>Jour 1: Immersion dans la cuisine portuense
+                <li>Jour 1: Arrivée et exploration des douceurs de Sintra
                     <ul>
-                        <li>Arrivée et installation à Porto</li>
-                        <li>Visite du marché de Bolhão et dégustation de produits locaux</li>
-                        <li>Dîner avec une Francesinha, le sandwich emblématique de la ville</li>
+                        <li>Arrivée à Sintra et installation</li>
+                        <li>Dégustation des célèbres "Travesseiros" (pâtisserie traditionnelle)</li>
+                        <li>Visite du centre historique et dîner avec "Bacalhau à Brás" (morue aux pommes de terre)</li>
                     </ul>
                 </li>
-                <li>Jour 2: Dégustation de vins et spécialités du Douro
+                <li>Jour 2: Palais, jardins et gastronomie
                     <ul>
-                        <li>Balade au bord du fleuve Douro et visite d’une cave à vin</li>
-                        <li>Dégustation de vins de Porto et accord mets-vins</li>
-                        <li>Déjeuner typique avec "Tripas à Moda do Porto" (ragoût de tripes et haricots)</li>
-                        <li>Fin du séjour et retour</li>
+                        <li>Visite du Palais de Pena et exploration des jardins</li>
+                        <li>Déjeuner dans un restaurant local avec "Feijoada" (ragoût de haricots et viande)</li>
+                        <li>Dégustation de "Queijo da Serra" (fromage de la région) accompagné de vin local</li>
                     </ul>
                 </li>
             </ul>

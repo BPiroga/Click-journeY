@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../style.css">
     <title>CY Portugal</title>
 </head>
-
 <body>
     <header class="navbar">
         <a class="logo" href="../index.php"><img src="../src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
@@ -21,20 +20,20 @@
     <div class="container">
 
         <div class="description">
-            <p class="title">Découverte des street food à Lisbonne</p>
-            <img src="../src/Street food.webp" alt="Street food">
+            <p class="title">Week-end sucré à Lisbonne : Pâtisseries et douceurs portugaises</p>
+            <img src="../src/offre12.jpg" alt="Pâtisseries Lisbonne">
             <p>
-                Découvrez Lisbonne autrement à travers ses saveurs de rue authentiques et gourmandes ! Ce séjour vous plongera dans l’ambiance vibrante des marchés, des quartiers animés et des meilleurs spots de street food de la capitale portugaise.
+                Pour les amateurs de douceurs, ce week-end à Lisbonne vous plongera dans l’univers sucré du Portugal. Des célèbres Pasteis de Nata aux recettes moins connues, découvrez les meilleures pâtisseries de la ville.
             </p>
         </div>
 
         <div id="resumer">
             <p>Ce qui est inclus dans le circuit</p>
-            <div class="nbrnuit"> <img src="../src/nuit.png"alt="icone nuit">
+            <div class="nbrnuit"> <img src="../src/nuit.png" alt="icone nuit">
                 <p>2 nuits</p>
             </div>
             <div class="découverte"> <img src="../src/découverte.png" alt="icone découverte">
-                <p>2 découvertes culinaires</p>
+                <p>3 dégustations sucrées</p>
             </div>
             <div class="transport"> <img src="../src/transport.png" alt="icone transport">
                 <p>Transport inclus</p>
@@ -44,21 +43,16 @@
         <div class="parcours">
             <p class="title">Parcours</p>
             <ul>
-                <li>Jour 1: Saveurs locales et quartiers emblématiques
+                <li>Jour 1: Découverte des classiques
                     <ul>
-                        <li>Arrivée à Lisbonne et installation</li>
-                        <li>Visite du quartier de l’Alfama et découverte des spécialités locales</li>
-                        <li>Dégustation de Bifana (sandwich de porc mariné) et de Pasteis de Bacalhau</li>
-                        <li>Dîner dans un marché gastronomique</li>
+                        <li>Visite d’une pâtisserie emblématique pour déguster des Pasteis de Nata</li>
+                        <li>Atelier pour apprendre à préparer ses propres douceurs</li>
                     </ul>
                 </li>
-                <li>Jour 2: Marchés et gourmandises de rue
+                <li>Jour 2: Exploration sucrée
                     <ul>
-                        <li>Balade au Mercado de Campo de Ourique et dégustation de spécialités régionales</li>
-                        <li>Déjeuner sur le pouce avec une Tosta Mista et un verre de Ginjinha</li>
-                        <li>Découverte des secrets du Pastel de Nata dans une pâtisserie emblématique</li>
-                        <li>Après-midi libre pour explorer la ville</li>
-                        <li>Fin du séjour et retour</li>
+                        <li>Brunch avec Bolo de Arroz (gâteau de riz portugais)</li>
+                        <li>Balade gourmande dans le quartier du Chiado</li>
                     </ul>
                 </li>
             </ul>
@@ -69,7 +63,6 @@
         <p>&copy; 2025 CY Portugal</p>
         <a href="../profil.php">Compte</a>
         <a href="../admin.php">Administration</a>
-        <p>Contact : CY Tech</p>
     </footer>
 </body>
 </html>

@@ -20,20 +20,20 @@
     <div class="container">
 
         <div class="description">
-            <p class="title">Séjour œnologique et gastronomique dans la vallée du Douro</p>
-            <img src="../src/offre9.jpg" alt="Douro Food">
+            <p class="title">Séjour gastronomique à Porto : Saveurs du Nord</p>
+            <img src="../src/offre7.jpg" alt="Porto Food">
             <p>
-                Explorez la célèbre vallée du Douro, terre de vignobles et de saveurs authentiques. Entre dégustations de vins et spécialités régionales, ce séjour vous fera voyager au cœur du Portugal rural.
+                Découvrez Porto à travers sa gastronomie unique ! De la Francesinha aux vins de la vallée du Douro, ce séjour vous fera explorer les spécialités de la ville et la richesse culinaire du nord du Portugal.
             </p>
         </div>
 
         <div id="resumer">
             <p>Ce qui est inclus dans le circuit</p>
             <div class="nbrnuit"> <img src="../src/nuit.png" alt="icone nuit">
-                <p>3 nuits</p>
+                <p>2 nuits</p>
             </div>
             <div class="découverte"> <img src="../src/découverte.png" alt="icone découverte">
-                <p>4 dégustations de vins</p>
+                <p>3 découvertes culinaires</p>
             </div>
             <div class="transport"> <img src="../src/transport.png" alt="icone transport">
                 <p>Transport inclus</p>
@@ -43,9 +43,21 @@
         <div class="parcours">
             <p class="title">Parcours</p>
             <ul>
-                <li>Jour 1: Visite de caves et dégustation de Porto</li>
-                <li>Jour 2: Journée dans un domaine viticole avec déjeuner gastronomique</li>
-                <li>Jour 3: Croisière sur le Douro et dégustation de vins rouges locaux</li>
+                <li>Jour 1: Immersion dans la cuisine portuense
+                    <ul>
+                        <li>Arrivée et installation à Porto</li>
+                        <li>Visite du marché de Bolhão et dégustation de produits locaux</li>
+                        <li>Dîner avec une Francesinha, le sandwich emblématique de la ville</li>
+                    </ul>
+                </li>
+                <li>Jour 2: Dégustation de vins et spécialités du Douro
+                    <ul>
+                        <li>Balade au bord du fleuve Douro et visite d’une cave à vin</li>
+                        <li>Dégustation de vins de Porto et accord mets-vins</li>
+                        <li>Déjeuner typique avec "Tripas à Moda do Porto" (ragoût de tripes et haricots)</li>
+                        <li>Fin du séjour et retour</li>
+                    </ul>
+                </li>
             </ul>
             <button>Réserver maintenant</button>
         </div>

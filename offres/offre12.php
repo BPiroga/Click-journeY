@@ -20,20 +20,20 @@
     <div class="container">
 
         <div class="description">
-            <p class="title">Week-end sucré à Lisbonne : Pâtisseries et douceurs portugaises</p>
-            <img src="../src/offre12.jpg" alt="Pâtisseries Lisbonne">
+            <p class="title">Aventure gastronomique en Algarve : Poissons et fruits de mer</p>
+            <img src="../src/offre11.jpg" alt="Algarve Food">
             <p>
-                Pour les amateurs de douceurs, ce week-end à Lisbonne vous plongera dans l’univers sucré du Portugal. Des célèbres Pasteis de Nata aux recettes moins connues, découvrez les meilleures pâtisseries de la ville.
+                L’Algarve, terre de soleil et de saveurs marines, vous attend pour un séjour culinaire unique. Entre poissons grillés, fruits de mer et vins régionaux, plongez dans l’essence de la cuisine du sud du Portugal.
             </p>
         </div>
 
         <div id="resumer">
             <p>Ce qui est inclus dans le circuit</p>
             <div class="nbrnuit"> <img src="../src/nuit.png" alt="icone nuit">
-                <p>2 nuits</p>
+                <p>4 nuits</p>
             </div>
             <div class="découverte"> <img src="../src/découverte.png" alt="icone découverte">
-                <p>3 dégustations sucrées</p>
+                <p>5 dégustations maritimes</p>
             </div>
             <div class="transport"> <img src="../src/transport.png" alt="icone transport">
                 <p>Transport inclus</p>
@@ -43,16 +43,30 @@
         <div class="parcours">
             <p class="title">Parcours</p>
             <ul>
-                <li>Jour 1: Découverte des classiques
+                <li>Jour 1: Arrivée et introduction aux saveurs de l’Algarve
                     <ul>
-                        <li>Visite d’une pâtisserie emblématique pour déguster des Pasteis de Nata</li>
-                        <li>Atelier pour apprendre à préparer ses propres douceurs</li>
+                        <li>Installation à Faro</li>
+                        <li>Dîner avec une Cataplana de fruits de mer</li>
                     </ul>
                 </li>
-                <li>Jour 2: Exploration sucrée
+                <li>Jour 2: À la découverte du marché et de la mer
                     <ul>
-                        <li>Brunch avec Bolo de Arroz (gâteau de riz portugais)</li>
-                        <li>Balade gourmande dans le quartier du Chiado</li>
+                        <li>Visite du marché de Loulé et dégustation de produits locaux</li>
+                        <li>Déjeuner avec Sardinhas Assadas (sardines grillées)</li>
+                        <li>Excursion en bateau et pêche traditionnelle</li>
+                    </ul>
+                </li>
+                <li>Jour 3: Journée à Lagos et ses spécialités
+                    <ul>
+                        <li>Randonnée le long des falaises de Ponta da Piedade</li>
+                        <li>Dégustation de Poisson grillé accompagné d’un vin blanc régional</li>
+                    </ul>
+                </li>
+                <li>Jour 4: Fin du séjour en douceur
+                    <ul>
+                        <li>Balade dans les ruelles de Tavira</li>
+                        <li>Brunch avec Ovos com Farinheira (œufs brouillés à la saucisse)</li>
+                        <li>Retour</li>
                     </ul>
                 </li>
             </ul>
@@ -63,6 +77,7 @@
         <p>&copy; 2025 CY Portugal</p>
         <a href="../profil.php">Compte</a>
         <a href="../admin.php">Administration</a>
+        <p>Contact : CY Tech</p>
     </footer>
 </body>
 </html>

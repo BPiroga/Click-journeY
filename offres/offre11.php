@@ -20,20 +20,20 @@
     <div class="container">
 
         <div class="description">
-            <p class="title">Aventure gastronomique en Algarve : Poissons et fruits de mer</p>
-            <img src="../src/offre11.jpg" alt="Algarve Food">
+            <p class="title">Expérience culinaire et fado à Lisbonne</p>
+            <img src="../src/offre10.jpg" alt="Lisbonne Fado">
             <p>
-                L’Algarve, terre de soleil et de saveurs marines, vous attend pour un séjour culinaire unique. Entre poissons grillés, fruits de mer et vins régionaux, plongez dans l’essence de la cuisine du sud du Portugal.
+                Imprégnez-vous de l'âme de Lisbonne à travers un voyage entre saveurs et musique. Dégustez des plats traditionnels tout en écoutant du Fado dans des lieux emblématiques de la ville.
             </p>
         </div>
 
         <div id="resumer">
             <p>Ce qui est inclus dans le circuit</p>
             <div class="nbrnuit"> <img src="../src/nuit.png" alt="icone nuit">
-                <p>4 nuits</p>
+                <p>3 nuits</p>
             </div>
             <div class="découverte"> <img src="../src/découverte.png" alt="icone découverte">
-                <p>5 dégustations maritimes</p>
+                <p>3 expériences culinaires et musicales</p>
             </div>
             <div class="transport"> <img src="../src/transport.png" alt="icone transport">
                 <p>Transport inclus</p>
@@ -43,30 +43,25 @@
         <div class="parcours">
             <p class="title">Parcours</p>
             <ul>
-                <li>Jour 1: Arrivée et introduction aux saveurs de l’Algarve
+                <li>Jour 1: Arrivée et premiers plaisirs gustatifs
                     <ul>
-                        <li>Installation à Faro</li>
-                        <li>Dîner avec une Cataplana de fruits de mer</li>
+                        <li>Installation et découverte du quartier de Bairro Alto</li>
+                        <li>Dîner avec dégustation de Bacalhau à Brás</li>
+                        <li>Soirée Fado dans une taverne historique</li>
                     </ul>
                 </li>
-                <li>Jour 2: À la découverte du marché et de la mer
+                <li>Jour 2: Entre saveurs et traditions
                     <ul>
-                        <li>Visite du marché de Loulé et dégustation de produits locaux</li>
-                        <li>Déjeuner avec Sardinhas Assadas (sardines grillées)</li>
-                        <li>Excursion en bateau et pêche traditionnelle</li>
+                        <li>Visite du marché Time Out et dégustations de spécialités locales</li>
+                        <li>Cours de cuisine pour apprendre à préparer des Pasteis de Nata</li>
+                        <li>Dîner spectacle avec Fado et vin portugais</li>
                     </ul>
                 </li>
-                <li>Jour 3: Journée à Lagos et ses spécialités
+                <li>Jour 3: Balade et dernières découvertes
                     <ul>
-                        <li>Randonnée le long des falaises de Ponta da Piedade</li>
-                        <li>Dégustation de Poisson grillé accompagné d’un vin blanc régional</li>
-                    </ul>
-                </li>
-                <li>Jour 4: Fin du séjour en douceur
-                    <ul>
-                        <li>Balade dans les ruelles de Tavira</li>
-                        <li>Brunch avec Ovos com Farinheira (œufs brouillés à la saucisse)</li>
-                        <li>Retour</li>
+                        <li>Brunch typique avec café et Torradas</li>
+                        <li>Découverte du quartier de l’Alfama et ses restaurants familiaux</li>
+                        <li>Retour en fin d’après-midi</li>
                     </ul>
                 </li>
             </ul>
