@@ -20,6 +20,7 @@ $offres = json_decode(file_get_contents($offresFile), true);
             <a href="presentation.php">Présentation</a>
             <a href="recherche.php">Recherche</a>
             <?php renderAuthLinks($isLoggedIn); ?>
+            <a href="panier.php">Mon panier</a>
         </div>
     </header>
     <div class="container">
