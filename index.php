@@ -14,6 +14,7 @@
             <a href="presentation.php">Présentation</a>
             <a href="recherche.php">Recherche</a>
             <a href="connexion.php" class="loginbtn">Se connecter</a>
+            <a href="panier.php">Mon panier</a>
         </div>
     </header>
     <div class="container">
