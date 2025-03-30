@@ -1,6 +1,5 @@
 <?php
-
-<?php require_once 'php/session_outils.php'; ?>
+require_once 'php/session_outils.php';
 
 $offresFile = 'data/Offre.json';
 $offres = json_decode(file_get_contents($offresFile), true);
