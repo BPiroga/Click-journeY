@@ -3,6 +3,9 @@ require_once 'php/session_outils.php';
 
 $offresFile = 'data/offres.json';
 $offres = json_decode(file_get_contents($offresFile), true);
+
+// Tableau contenant les IDs des offres à afficher
+$offresChoisies = [2, 14]; // IDs des offres à afficher
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -20,20 +23,18 @@ $offres = json_decode(file_get_contents($offresFile), true);
             <a href="presentation.php">Présentation</a>
             <a href="recherche.php">Recherche</a>
             <?php renderAuthLinks($isLoggedIn); ?>
-            <a href="panier.php">Mon panier</a>
         </div>
     </header>
     <div class="container">
         <div class="offres">
-            <div>
-                <img src="src/Vin Porto.jpg" alt="Vin Porto" id="vin-porto">
-                <img src="src/Verre de vin.webp" alt="Verre de vin" id="verre-de-vin">
-                <a class="button-offres" href="offres/offre2.php">299€</a>
-            </div>
-            <div>
-                <img src="src/Street food.webp" alt="Street food" id="street-food">
-                <a class="button-offres" href="offres/offre14.php">199€</a>
-            </div>
+            <?php foreach ($offres as $offre): ?>
+                <?php if (in_array($offre['id'], $offresChoisies)): ?>
+                    <div>
+                        <img class="offre-image" src="<?= htmlspecialchars($offre['image']) ?>" alt="<?= htmlspecialchars($offre['titre']) ?>">
+                        <a class="button-offres" href="offres/offre<?= $offre['id'] ?>.php"><?= htmlspecialchars($offre['prix']) ?>€</a>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
         </div>
     </div>
     <div class="container-recherche"> 

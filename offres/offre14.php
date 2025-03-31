@@ -1,3 +1,18 @@
+<?php
+require_once '../php/session_outils.php';
+
+// ID de l'offre actuelle
+$offreId = 14;
+
+// Vérifier si l'offre est dans le panier
+$isInPanier = isOfferInPanier($offreId);
+
+// Ajouter l'offre au panier si le bouton est cliqué
+if (isset($_GET['add_to_cart']) && $_GET['add_to_cart'] == $offreId) {
+    handlePanier($offreId);
+    $isInPanier = true; // Mettre à jour l'état après l'ajout
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -15,7 +30,7 @@
         <div class="navlinks">
             <a href="../presentation.php">Présentation</a>
             <a href="../recherche.php">Recherche</a>
-            <a href="../connexion.php" class="loginbtn">Se connecter</a>
+            <?php renderAuthLinks($isLoggedIn); ?>
         </div>
     </header>
     <div class="container">
@@ -62,7 +77,11 @@
                     </ul>
                 </li>
             </ul>
-            <button>Réserver maintenant</button>
+            <?php if ($isInPanier): ?>
+                <a href="../profil.php">Voir mon panier</a>
+            <?php else: ?>
+                <a href="?add_to_cart=<?= $offreId ?>" class="btn">Réserver maintenant</a>
+            <?php endif; ?>
         </div>
     </div>
     <footer>

@@ -125,29 +125,11 @@ footer a {
     background-color: #9d9d9d;
 }
 
-#vin-porto {
+.offre-image {
     position: absolute;
     width: 750px;
     height: 300px;
     object-fit: cover;
-    border-radius: 10px;
-}
-
-#verre-de-vin {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    top: 5%;
-    left: 10%;
-    object-fit: cover;
-}
-
-#street-food {
-    position: absolute;
-    width: 750px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
 }
 
 .button-offres {
@@ -601,18 +583,19 @@ body>p {
     text-align: left;
 }
 
-.parcours button {
+.parcours a {
+    display: inline-block; /* Pour imiter le comportement du bouton */
     font-size: 18px;
     font-weight: bold;
     color: white;
     background-color: #D9851E;
-    border: none;
+    text-decoration: none; /* Supprime le soulignement des liens */
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.parcours button:hover {
+.parcours a:hover {
     background-color: #794b13;
 }

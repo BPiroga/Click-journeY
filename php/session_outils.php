@@ -11,20 +11,57 @@ if (isset($_GET['logout']) && $_GET['logout'] === 'true') {
 
 // Fonction pour afficher les liens de connexion/déconnexion
 function renderAuthLinks($isLoggedIn) {
-    // Vérifier si le fichier actuel est dans le dossier "offres"
     $isInOffresFolder = strpos($_SERVER['SCRIPT_FILENAME'], 'offres') !== false;
     $basePath = $isInOffresFolder ? '../' : '';
 
     if ($isLoggedIn) {
-        // Vérifier si l'utilisateur est un administrateur
         if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
-            echo '<a href="' . $basePath . 'admin.php" class="loginbtn">Compte</a>'; // Rediriger vers admin.php
+            echo '<a href="' . $basePath . 'admin.php" class="loginbtn">Compte</a>';
         } else {
-            echo '<a href="' . $basePath . 'profil.php" class="loginbtn">Compte</a>'; // Rediriger vers profil.php
+            echo '<a href="' . $basePath . 'profil.php" class="loginbtn">Compte</a>';
         }
         echo '<a href="' . $basePath . 'index.php?logout=true" class="logoutbtn">Se déconnecter</a>';
     } else {
         echo '<a href="' . $basePath . 'connexion.php" class="loginbtn">Se connecter</a>';
     }
+}
+
+// Fonction pour gérer le panier
+function handlePanier($offreId) {
+    if (!isset($_SESSION['email'])) {
+        header('Location: ../connexion.php');
+        exit();
+    }
+
+    $usersFile = '../data/users.json';
+    $usersData = json_decode(file_get_contents($usersFile), true);
+
+    foreach ($usersData['users'] as &$user) {
+        if ($user['email'] === $_SESSION['email']) {
+            if (!in_array($offreId, $user['panier'])) {
+                $user['panier'][] = $offreId;
+            }
+            file_put_contents($usersFile, json_encode($usersData, JSON_PRETTY_PRINT));
+            break;
+        }
+    }
+}
+
+// Fonction pour vérifier si une offre est dans le panier
+function isOfferInPanier($offreId) {
+    if (!isset($_SESSION['email'])) {
+        return false;
+    }
+
+    $usersFile = '../data/users.json';
+    $usersData = json_decode(file_get_contents($usersFile), true);
+
+    foreach ($usersData['users'] as $user) {
+        if ($user['email'] === $_SESSION['email'] && in_array($offreId, $user['panier'])) {
+            return true;
+        }
+    }
+
+    return false;
 }
 ?>

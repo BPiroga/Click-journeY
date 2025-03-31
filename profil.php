@@ -1,6 +1,8 @@
 <?php
 require_once 'php/session_outils.php'; // Inclure les outils de session
+
 $jsonFile = 'data/users.json';
+$offresFile = 'data/offres.json';
 $userData = null;
 
 // Charger les données utilisateur depuis le fichier JSON
@@ -36,7 +38,11 @@ if (!isset($userData)) {
     exit();
 }
 
-// Ne pas rediriger l'admin vers la page admin lorsqu'il consulte son propre profil
+// Charger les données des offres
+$offres = json_decode(file_get_contents($offresFile), true);
+
+// Récupérer les IDs des offres réservées par l'utilisateur
+$offresReservees = $userData['panier'] ?? [];
 ?>
 
 <!DOCTYPE html>
@@ -107,15 +113,14 @@ if (!isset($userData)) {
     <p>Réservations</p>
     <div class="profil-reservation">
         <div class="offres">
-            <div>
-                <img src="src/Vin Porto.jpg" alt="Vin Porto" id="vin-porto">
-                <img src="src/Verre de vin.webp" alt="Verre de vin" id="verre-de-vin">
-                <a class="button-offres" href="vin.php">Réservé</a>
-            </div>
-            <div>
-                <img src="../src/Street food.webp" alt="Street food" id="street-food">
-                <a class="button-offres" href="street.php">Réservé</a>
-            </div>
+            <?php foreach ($offres as $offre): ?>
+                <?php if (in_array($offre['id'], $offresReservees)): ?>
+                    <div>
+                        <img class="offre-image" src="<?= htmlspecialchars($offre['image']) ?>" alt="<?= htmlspecialchars($offre['titre']) ?>">
+                        <a class="button-offres" href="offres/offre<?= $offre['id'] ?>.php">Réservé</a>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
         </div>
     </div>
     <footer>
