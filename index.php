@@ -2,10 +2,37 @@
 require_once 'php/session_outils.php';
 
 $offresFile = 'data/offres.json';
-$offres = json_decode(file_get_contents($offresFile), true);
+$keywordsFile = 'data/keywords.json';
 
-// Tableau contenant les IDs des offres à afficher
-$offresChoisies = [2, 14]; // IDs des offres à afficher
+$offres = json_decode(file_get_contents($offresFile), true);
+$keywords = json_decode(file_get_contents($keywordsFile), true);
+
+// Récupérer les offres avec les IDs 2 et 14
+$offresChoisies = array_filter($offres, function ($offre) {
+    return in_array($offre['id'], [2, 14]);
+});
+
+// Vérifier si une recherche a été effectuée
+$query = $_GET['query'] ?? null;
+if ($query) {
+    $query = strtolower($query); // Convertir en minuscule pour une recherche insensible à la casse
+
+    // Trouver les IDs des offres correspondant aux mots-clés
+    $matchingIds = [];
+    foreach ($keywords as $id => $words) {
+        foreach ($words as $word) {
+            if (strpos($word, $query) !== false) {
+                $matchingIds[] = (int)$id;
+                break; // Passer à l'offre suivante si un mot-clé correspond
+            }
+        }
+    }
+
+    // Filtrer les offres en fonction des IDs correspondants
+    $offres = array_filter($offres, function ($offre) use ($matchingIds) {
+        return in_array($offre['id'], $matchingIds);
+    });
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,31 +54,35 @@ $offresChoisies = [2, 14]; // IDs des offres à afficher
     </header>
     <div class="container">
         <div class="offres">
-            <?php foreach ($offres as $offre): ?>
-                <?php if (in_array($offre['id'], $offresChoisies)): ?>
-                    <div>
-                        <img class="offre-image" src="<?= htmlspecialchars($offre['image']) ?>" alt="<?= htmlspecialchars($offre['titre']) ?>">
-                        <a class="button-offres" href="offres/offre<?= $offre['id'] ?>.php"><?= htmlspecialchars($offre['prix']) ?>€</a>
-                    </div>
-                <?php endif; ?>
+            <?php foreach ($offresChoisies as $offre): ?>
+                <div>
+                    <img class="offre-image" src="<?= htmlspecialchars($offre['image']) ?>" alt="<?= htmlspecialchars($offre['titre']) ?>">
+                    <a class="button-offres" href="offres/offre<?= $offre['id'] ?>.php"><?= htmlspecialchars($offre['prix']) ?>€</a>
+                </div>
             <?php endforeach; ?>
         </div>
     </div>
     <div class="container-recherche"> 
         <div class="bar-recherche">
-            <input type="text" placeholder="Rechercher une expérience">
-            <button>Rechercher</button>
+            <form method="GET" action="index.php">
+                <input type="text" name="query" placeholder="Rechercher une expérience" value="<?= htmlspecialchars($_GET['query'] ?? '') ?>">
+                <button type="submit">Rechercher</button>
+            </form>
         </div>
         <div class="voyages">
-            <?php foreach ($offres as $offre): ?>
-                <div class="voyage-card">
-                    <a href="offres/offre<?= $offre['id'] ?>.php">
-                        <img src="<?= htmlspecialchars($offre['image']) ?>" alt="<?= htmlspecialchars($offre['titre']) ?>">
-                    </a>
-                    <h3><?= htmlspecialchars($offre['titre']) ?></h3>
-                    <p><?= htmlspecialchars($offre['duree']) ?> jours - À partir de <?= htmlspecialchars($offre['prix']) ?>€</p>
-                </div>
-            <?php endforeach; ?>
+            <?php if (empty($offres)): ?>
+                <p>Aucune offre ne correspond à votre recherche.</p>
+            <?php else: ?>
+                <?php foreach ($offres as $offre): ?>
+                    <div class="voyage-card">
+                        <a href="offres/offre<?= $offre['id'] ?>.php">
+                            <img src="<?= htmlspecialchars($offre['image']) ?>" alt="<?= htmlspecialchars($offre['titre']) ?>">
+                        </a>
+                        <h3><?= htmlspecialchars($offre['titre']) ?></h3>
+                        <p><?= htmlspecialchars($offre['duree']) ?> jours - À partir de <?= htmlspecialchars($offre['prix']) ?>€</p>
+                    </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
     </div>
     <footer>

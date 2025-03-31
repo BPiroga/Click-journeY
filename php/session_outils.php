@@ -57,8 +57,11 @@ function isOfferInPanier($offreId) {
     $usersData = json_decode(file_get_contents($usersFile), true);
 
     foreach ($usersData['users'] as $user) {
-        if ($user['email'] === $_SESSION['email'] && in_array($offreId, $user['panier'])) {
-            return true;
+        if ($user['email'] === $_SESSION['email']) {
+            // Vérifier si l'offre est dans le panier ou dans les réservations
+            if (in_array($offreId, $user['panier']) || in_array($offreId, $user['reservations'])) {
+                return true;
+            }
         }
     }
 

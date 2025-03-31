@@ -166,6 +166,12 @@ footer a {
     border-radius: 8px;
 }
 
+.bar-recherche form {
+    display: flex;
+    align-items: center;
+    width: 400px;
+}
+
 .bar-recherche input {
     width: 100%;
     margin: 5px 5% 5px 5px;
