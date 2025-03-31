@@ -1,6 +1,8 @@
 <?php
 require('getapikey.php');
 
+session_start(); // Démarrer la session pour accéder aux informations utilisateur
+
 $offresFile = 'data/offres.json';
 $offreId = $_GET['id'] ?? null;
 
@@ -24,13 +26,16 @@ if ($offre === null) {
     die('Offre introuvable.');
 }
 
+// Ajouter l'ID de l'offre dans la session
+$_SESSION['offre_id'] = $offreId;
+
 // Informations pour le paiement
 $transaction = "TX" . uniqid(); // Générer un identifiant unique pour la transaction
 $montant = $offre['prix'];
 $vendeur = 'MI-5_B';
 
-//impossible de mettre un fichier en localhost 
-$retour = 'http://localhost/Click-journeY/retour.php';
+// Générer dynamiquement le lien de retour
+$retour = dirname("http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) . "/retour.php";
 
 // Récupération de la clé API secrète
 $api_key = getAPIKey($vendeur);
