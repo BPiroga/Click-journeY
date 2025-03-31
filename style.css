@@ -169,7 +169,7 @@ footer a {
 .bar-recherche form {
     display: flex;
     align-items: center;
-    width: 400px;
+    width: 100%;
 }
 
 .bar-recherche input {
