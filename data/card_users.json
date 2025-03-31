@@ -1,0 +1,23 @@
+[
+    {
+        "nom": "Dupont",
+        "prenom": "Jean",
+        "num_card": "4111111111111111",
+        "date_ex": "2026-01",
+        "crypto": "123"
+    },
+    {
+        "nom": "Durand",
+        "prenom": "Marie",
+        "num_card": "4222222222222222",
+        "date_ex": "2027-05",
+        "crypto": "456"
+    },
+    {
+        "nom": "Martin",
+        "prenom": "Alice",
+        "num_card": "4333333333333333",
+        "date_ex": "2028-06",
+        "crypto": "789"
+    }
+]

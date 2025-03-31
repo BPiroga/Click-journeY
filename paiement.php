@@ -1,22 +1,42 @@
 <?php
-
-// fichier utiliser par le code
 require('getapikey.php');
-require('data/cart_users.json');
 
-// ces infos doivent être récuper d'un autre fichier
-$transaction = "TX12345ABC";
-$montant = '49.99';
+$offresFile = 'data/offres.json';
+$offreId = $_GET['id'] ?? null;
+
+if ($offreId === null) {
+    die('Aucune offre sélectionnée.');
+}
+
+// Charger les données des offres
+$offres = json_decode(file_get_contents($offresFile), true);
+$offre = null;
+
+// Trouver l'offre correspondante
+foreach ($offres as $o) {
+    if ($o['id'] == $offreId) {
+        $offre = $o;
+        break;
+    }
+}
+
+if ($offre === null) {
+    die('Offre introuvable.');
+}
+
+// Informations pour le paiement
+$transaction = "TX" . uniqid(); // Générer un identifiant unique pour la transaction
+$montant = $offre['prix'];
 $vendeur = 'MI-5_B';
 
 //impossible de mettre un fichier en localhost 
 $retour = 'http://localhost/Click-journeY/retour.php';
 
-//récuperation de la clé API secrète
+// Récupération de la clé API secrète
 $api_key = getAPIKey($vendeur);
 
-//controle md5 retourné par CYBANK
-$control = md5($api_key."#".$transaction."#".$montant."#".$vendeur."#".$retour."#");
+// Contrôle MD5 retourné par CYBANK
+$control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $retour . "#");
 ?>
 
 
@@ -35,23 +55,21 @@ $control = md5($api_key."#".$transaction."#".$montant."#".$vendeur."#".$retour."
         <div class="navlinks">
             <a href="presentation.php">Présentation</a>
             <a href="recherche.php">Recherche</a>
-            <a href="index.php">Retour</a>
+            <a href="profil.php">Retour</a>
         </div>
     </header>
     <div class="container">
         <div class="connexion">
             <table>
                 <tr>
-                    <td class="titre-connexion"> Votre panier</td>
+                    <td class="titre-connexion">Votre panier</td>
                 </tr>
                 <tr>
-                    <td>Nom du voyage</td>
-                    <td>date voyage début/fin</td>
-                    <td>image du voyage</td>
+                    <td><?= htmlspecialchars($offre['titre']) ?></td>
+                    <td><img src="<?= htmlspecialchars($offre['image']) ?>" alt="<?= htmlspecialchars($offre['titre']) ?>" width="400px"></td>
                 </tr>
-
                 <tr>
-                    <td class="titre-connexion">Total : 49.99€</td>
+                    <td class="titre-connexion">Total : <?= htmlspecialchars($montant) ?> €</td>
                 </tr>
             </table>
             <form action="https://www.plateforme-smc.fr/cybank/index.php" method="post">

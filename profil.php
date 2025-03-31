@@ -32,7 +32,7 @@ if (file_exists($jsonFile)) {
     }
 }
 
-// Rediriger vers la page de connexion si l'utilisateur n'est pas connecté ou si le profil n'est pas trouvé
+// Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
 if (!isset($userData)) {
     header('Location: connexion.php');
     exit();
@@ -42,7 +42,8 @@ if (!isset($userData)) {
 $offres = json_decode(file_get_contents($offresFile), true);
 
 // Récupérer les IDs des offres réservées par l'utilisateur
-$offresReservees = $userData['panier'] ?? [];
+$panier = $userData['panier'] ?? [];
+$reservations = $userData['reservations'] ?? [];
 ?>
 
 <!DOCTYPE html>
@@ -114,7 +115,13 @@ $offresReservees = $userData['panier'] ?? [];
     <div class="profil-reservation">
         <div class="offres">
             <?php foreach ($offres as $offre): ?>
-                <?php if (in_array($offre['id'], $offresReservees)): ?>
+                <?php if (in_array($offre['id'], $panier)): ?>
+                    <div>
+                        <img class="offre-image" src="<?= htmlspecialchars($offre['image']) ?>" alt="<?= htmlspecialchars($offre['titre']) ?>">
+                        <a class="button-offres" href="paiement.php?id=<?= $offre['id'] ?>"><?= htmlspecialchars($offre['prix']) ?> €</a>
+                    </div>
+                <?php endif; ?>
+                <?php if (in_array($offre['id'], $reservations)): ?>
                     <div>
                         <img class="offre-image" src="<?= htmlspecialchars($offre['image']) ?>" alt="<?= htmlspecialchars($offre['titre']) ?>">
                         <a class="button-offres" href="offres/offre<?= $offre['id'] ?>.php">Réservé</a>
