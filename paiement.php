@@ -10,7 +10,7 @@ $montant = '49.99';
 $vendeur = 'MI-5_B';
 
 //impossible de mettre un fichier en localhost 
-$retour = 'retour.php';
+$retour = 'http://localhost/Click-journeY/retour.php';
 
 //récuperation de la clé API secrète
 $api_key = getAPIKey($vendeur);
