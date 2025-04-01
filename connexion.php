@@ -1,5 +1,11 @@
 <?php
-session_start(); // Démarrer la session pour stocker les informations utilisateur
+session_start(); // Démarrer la session pour vérifier si l'utilisateur est connecté
+
+// Vérifier si l'utilisateur est déjà connecté
+if (isset($_SESSION['email'])) {
+    header('Location: index.php'); // Rediriger vers la page d'accueil
+    exit(); // Terminer le script après la redirection
+}
 
 $errorMessage = ''; // Variable pour stocker le message d'erreur
 

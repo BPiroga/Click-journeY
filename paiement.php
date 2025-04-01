@@ -3,11 +3,17 @@ require('getapikey.php');
 
 session_start(); // Démarrer la session pour accéder aux informations utilisateur
 
+// Vérifier si l'utilisateur est connecté
+if (!isset($_SESSION['email'])) {
+    header('Location: connexion.php'); // Rediriger vers la page de connexion
+    exit(); // Terminer le script après la redirection
+}
+
 $offresFile = 'data/offres.json';
 $offreId = $_GET['id'] ?? null;
 
 if ($offreId === null) {
-    die('Aucune offre sélectionnée.');
+    die('ID de l\'offre manquant.');
 }
 
 // Charger les données des offres

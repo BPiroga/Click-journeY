@@ -1,6 +1,14 @@
 <?php
 require_once 'php/session_outils.php'; // Inclure les outils de session
 
+session_start(); // Démarrer la session
+
+// Vérifier si l'utilisateur est connecté
+if (!isset($_SESSION['email'])) {
+    header('Location: connexion.php'); // Rediriger vers la page de connexion
+    exit(); // Terminer le script après la redirection
+}
+
 // Vérifier si l'utilisateur est connecté et est un administrateur
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     // Rediriger vers la page précédente ou une autre page
