@@ -1,7 +1,9 @@
 <?php
 require_once 'php/session_outils.php'; // Inclure les outils de session
 
-session_start(); // Démarrer la session
+if (session_status() === PHP_SESSION_NONE) {
+    session_start(); // Démarrer la session uniquement si elle n'est pas déjà démarrée
+}
 
 // Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['email'])) {
@@ -54,7 +56,7 @@ if (isset($_GET['action']) && isset($_GET['email'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-dark.css">
     <title>CY Portugal</title>
 </head>
 <body>

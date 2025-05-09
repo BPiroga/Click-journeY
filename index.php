@@ -40,18 +40,21 @@ if ($query) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="style-dark.css">
     <title>CY Portugal</title>
 </head>
-<body>
+<body data-mode="dark">
     <header class="navbar">
-        <a class="logo" href="index.php"><img src="src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
+        <a class="logo" href="index.php"><img id="logo-image" src="src/Logo-dark.png" alt="Logo CY Portugal" width="210px"></a>
         <p class="titre">CY Portugal</p>
         <div class="navlinks">
             <a href="presentation.php">Présentation</a>
             <a href="recherche.php">Recherche</a>
             <?php renderAuthLinks($isLoggedIn); ?>
         </div>
+        <button id="toggle-mode" class="button-link-admin">
+            <img id="mode-icon" src="src/moon-icon.png" alt="Changer de mode" width="24px">
+        </button>
     </header>
     <div class="container">
         <div class="offres">
@@ -92,5 +95,52 @@ if ($query) {
         <a href="admin.php">Administration</a>
         <p>Contact : CY Tech</p>
     </footer>
+    <script>
+    // Vérifier le cookie pour définir le mode initial
+    document.addEventListener('DOMContentLoaded', () => {
+        const mode = getCookie('mode') || 'dark'; // Par défaut, mode sombre
+        setMode(mode);
+    });
+
+    // Ajouter un événement au bouton pour changer de mode
+    document.getElementById('toggle-mode').addEventListener('click', () => {
+        const currentMode = document.body.dataset.mode;
+        const newMode = currentMode === 'dark' ? 'light' : 'dark';
+        setMode(newMode);
+        setCookie('mode', newMode, 30); // Enregistrer le mode dans un cookie pour 30 jours
+    });
+
+    // Fonction pour appliquer le mode
+    function setMode(mode) {
+        document.body.dataset.mode = mode;
+        const stylesheet = document.getElementById('theme-stylesheet');
+        const logoImage = document.getElementById('logo-image');
+        const modeIcon = document.getElementById('mode-icon');
+        
+        stylesheet.href = mode === 'dark' ? 'style-dark.css' : 'style.css';
+        logoImage.src = mode === 'dark' ? 'src/Logo-dark.png' : 'src/Logo.png';
+        modeIcon.src = mode === 'dark' ? 'src/moon.png' : 'src/sun.png';
+        modeIcon.alt = mode === 'dark' ? 'Mode sombre' : 'Mode clair';
+    }
+
+    // Fonction pour définir un cookie
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+    }
+
+    // Fonction pour récupérer un cookie
+    function getCookie(name) {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.startsWith(name + '=')) {
+                return cookie.substring(name.length + 1);
+            }
+        }
+        return null;
+    }
+</script>
 </body>
 </html>

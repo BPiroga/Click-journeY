@@ -1,0 +1,628 @@
+/* Dark Mode Theme */
+
+/* Balises essentielles */
+
+html {
+    margin: 0;
+    padding: 0;  
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+footer {
+    display: flex;
+    background-color: #1e1e1e; /* Darker footer */
+    bottom: 0;
+    width: 100%;
+    padding: 3% 0 3% 0;
+}
+
+footer p,
+footer a {
+    font-size: 18px;
+    color: #e0e0e0; /* Light text */
+    margin: 0 auto;
+}
+
+
+
+/* Barre de navigation */
+
+.navbar {
+    background-color: #1e1e1e; /* Dark navbar */
+    font-family: Garamond, serif;
+    font-size: 20px;
+    height: 110px;
+    padding: 1%;
+    margin: 3%;
+    margin-top: 3%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin: 0 2% 0 2%;
+    align-items: center;
+}
+
+.titre {
+    color: #e0e0e0; /* Light text */
+    font-size: 55px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.navlinks {
+    margin: 0 auto;
+    display: flex;
+}
+
+.navlinks a {
+    text-decoration: none;
+    margin: 0 5% 0 5%;
+    color: #e0e0e0; /* Light text */
+    border: 3px solid #D9851E;
+    padding: 8px;
+    background-color: #333333; /* Darker background */
+    border-radius: 8px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.navlinks a:hover {
+    background-color: #444444; /* Slightly lighter on hover */
+    transform: scale(1.1);
+}
+
+.container {
+    font-family: Montserrat, sans-serif;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Offres avec système de défilement */
+
+.offres {
+    background-image: url("../src/Azulejos-dark.png");
+    background-size: cover;
+    background-position: center;
+    width: 900px;
+    height: 380px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+.offres > div {
+    position: relative;
+    width: 750px;
+    height: 300px;
+    margin: 0 75px;
+    border-radius: 10px;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    scroll-snap-align: center;
+    background-color: #333333; /* Darker background */
+}
+
+.offre-image {
+    position: absolute;
+    width: 750px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.button-offres {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: #D9851E;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-offres:hover {
+    background-color: #794b13;
+}
+
+
+
+/* Barre de recherche */
+
+.bar-recherche {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #1e1e1e; /* Darker background */
+    border-radius: 8px;
+}
+
+.bar-recherche form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.bar-recherche input {
+    width: 100%;
+    margin: 5px 5% 5px 5px;
+    padding: 15px;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333333; /* Darker input background */
+    color: #e0e0e0; /* Light text */
+}
+
+.bar-recherche button {
+    margin-right: 5px;
+    padding: 10px;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #D9851E;
+    color: white; /* Dark text for contrast */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bar-recherche button:hover {
+    background-color: #048ABF;
+}
+
+
+
+/* Recherche */
+
+.container-recherche {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 3% 20% 3%;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #1e1e1e; /* Darker background */
+    border-radius: 8px;
+}
+
+.filters input {
+    width: auto;
+    margin-left: 5px;
+}
+
+.filters label {
+    color: #e0e0e0; /* Light text */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filters > select, .filters > input, .filters > button, .filters > div, .options-details > summary {
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+.filters > button,
+.options-details > summary {
+    background-color: #D9851E;
+    color: white; /* Dark text for contrast */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filters > button:hover,
+.options-details > summary:hover {
+    background-color: #048ABF;
+}
+
+.voyages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.voyage-card {
+    width: auto;
+    max-width: 400px;
+    border: 2px solid #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    background-color: #1e1e1e; /* Darker card background */
+}
+
+.voyage-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.voyage-card img:hover {
+    transform: scale(1.03);
+}
+
+.voyage-card h3 {
+    margin: 10px 0;
+    color: #e0e0e0; /* Light text */
+}
+
+.voyage-card p {
+    font-size: 16px;
+    color: #ddd; /* Lighter text */
+}
+
+.options-details > label {
+    display: block;
+    margin: 8px 0;
+}
+
+
+
+/* Présentation */
+
+.presentation-titre {
+    margin-top: 10%;
+    margin-bottom: 2%;
+    color: #e0e0e0; /* Light text */
+    font-size: 35px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.presentation-texte {
+    margin: 0 auto;
+    margin-bottom: 20%;
+    color: #ddd; /* Lighter text */
+    line-height: 1.8;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+
+
+/* Connexion */
+
+.connexion {
+    width: 30%;
+    margin: 0 auto;
+    padding: 3%;
+    background-color: #1e1e1e; /* Darker background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.connexion table {
+    width: 100%;
+}
+
+.titre-connexion {
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Light text */
+}
+
+.retour {
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 250px;
+    color: #e0e0e0; /* Light text */
+}
+
+.connexion td {
+    display: flex;
+    padding: 10px 0;
+}
+
+.connexion input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333333; /* Darker input background */
+    color: #e0e0e0; /* Light text */
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+}
+
+.form-buttons button,
+.button-link-connexion {
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+    padding: 3%;
+    margin: 3% 0;
+    background-color: #333333;
+    border: 3px solid #D9851E;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-buttons button:hover,
+.button-link-connexion:hover {
+    background-color: #444444;
+}
+
+.button-creation-compte {
+    text-align: center;
+    margin: 3% 0;
+    color: white;
+    text-decoration: none;
+}
+
+.button-creation-compte:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Profil */
+
+body>p {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.profil-info {
+    width: 50%;
+    margin: 3% auto;
+    padding: 2%;
+    width: 60%;
+    background-color: #1e1e1e; /* Darker background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.profil-info > p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Light text */
+}
+
+.profil-info div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.profil-info > div > p {
+    margin-right: auto;
+}
+
+.profil-info input {
+    height: 40px;
+    width: 50%;
+    padding: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #333333; /* Darker input background */
+    color: #e0e0e0; /* Light text */
+}
+
+.profil-info button,
+.button-link-admin {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    padding: 1%;
+    margin: 2%;
+    background-color: #333333;
+    border: 3px solid #D9851E;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.profil-info button:hover,
+.button-link-admin:hover {
+    background-color: #444444;
+}
+
+.button-link-admin {
+    text-decoration: none;
+}
+
+.profil-reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6% auto;
+}
+
+.admin-profils p{
+    margin-right: 5%;    
+}
+
+
+
+/* Pages Offres */
+
+.description {
+    background-color: #1e1e1e; /* Darker background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.description .title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #D9851E; /* Accent color */
+    margin-bottom: 20px;
+}
+
+.description img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.description p {
+    font-size: 18px;
+    color: #ddd; /* Lighter text */
+    line-height: 1.6;
+}
+
+#resumer {
+    background-color: #1e1e1e; /* Darker background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#resumer p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #D9851E; /* Accent color */
+    margin-bottom: 20px;
+}
+
+#resumer .nbrnuit,
+#resumer .découverte,
+#resumer .transport {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#resumer img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#resumer div p {
+    font-size: 18px;
+    color: #ddd; /* Lighter text */
+}
+
+.parcours {
+    background-color: #1e1e1e; /* Darker background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.parcours .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #D9851E; /* Accent color */
+    margin-bottom: 20px;
+}
+
+.parcours ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.parcours ul li {
+    font-size: 18px;
+    color: #ddd; /* Lighter text */
+    margin-bottom: 10px;
+}
+
+.parcours ul ul {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    list-style-type: circle;
+}
+
+.parcours ul ul li {
+    font-size: 16px;
+    color: #bbb; /* Even lighter text */
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.parcours a {
+    display: inline-block; /* Pour imiter le comportement du bouton */
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #D9851E;
+    text-decoration: none; /* Supprime le soulignement des liens */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.parcours a:hover {
+    background-color: #794b13;
+}
