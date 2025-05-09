@@ -46,6 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errorMessage = 'Adresse email ou mot de passe incorrect.'; // Définir le message d'erreur
     }
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +79,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <tr>
                         <td>Mot de passe :</td>
                         <td>
-                            <input type="password" name="code" placeholder="Entrer votre code" required>
+                            <input type="password" name="code" placeholder="Entrer votre code" maxlength="20" required>
+                            <span class="toggle-password">👁️</span>
+                            <span class="password-counter">0/20</span>
                         </td>
                     </tr>
                 </table>
@@ -100,5 +104,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a href="admin.php">Administration</a>
         <p>Contact : CY Tech</p>
     </footer>
+    <script src="connexion.js"></script>
 </body>
 </html>

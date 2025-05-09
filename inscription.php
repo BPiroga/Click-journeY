@@ -108,13 +108,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <tr>
                         <td>Créer mot de passe :</td>
                         <td>
-                            <input type="password" name="code" required>
+                            <input type="password" name="code" maxlength="20" required>
+                            <span class="toggle-password">👁️</span>
+                            <span id="password-counter" class="password-counter">0/20</span>
                         </td>
                     </tr>
                     <tr>
                         <td>Confirmer mot de passe :</td>
                         <td> 
-                            <input type="password" name="confirm_code" required>
+                            <input type="password" name="confirm_code" maxlength="20" required>
                         </td>
                     </tr>
                 </table>
@@ -135,5 +137,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a href="admin.php">Administration</a>
         <p>Contact : CY Tech</p>
     </footer>
+    <script src="inscription.js"></script>
 </body>
 </html>

@@ -404,6 +404,15 @@ footer a {
     text-decoration: underline;
 }
 
+.toggle-password {
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+
+
+
 
 
 /* Profil */
