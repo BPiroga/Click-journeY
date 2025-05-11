@@ -70,45 +70,49 @@ $reservations = $userData['reservations'] ?? [];
             <?php echo (isset($userData['role']) && $userData['role'] === 'vip') ? 'Information profil VIP' : 'Information profil'; ?>
         </p>
 
-        <div>
-            <p>Prénom :</p>
-            <input type="text" value="<?php echo htmlspecialchars($userData['prenom']); ?>" disabled>
-            <button type="button">
-                <span>&#9998</span> Modifier
-            </button>
-        </div>
+        <form id="profil-form" method="post" action="update_profil.php">
+            <div>
+                <p>Prénom :</p>
+                <input type="text" name="prenom" value="<?= htmlspecialchars($userData['prenom'] ?? '') ?>" disabled>
+                <button type="button" class="edit-btn">Modifier</button>
+                <button type="button" class="cancel-btn" style="display: none;">Annuler</button>
+                <button type="button" class="save-btn" style="display: none;">Valider</button>
+            </div>
 
-        <div>
-            <p>Nom :</p>
-            <input type="text" value="<?php echo htmlspecialchars($userData['nom']); ?>" disabled>
-            <button type="button">
-                <span>&#9998</span> Modifier
-            </button>
-        </div>
+            <div>
+                <p>Nom :</p>
+                <input type="text" name="nom" value="<?= htmlspecialchars($userData['nom'] ?? '') ?>" disabled>
+                <button type="button" class="edit-btn">Modifier</button>
+                <button type="button" class="cancel-btn" style="display: none;">Annuler</button>
+                <button type="button" class="save-btn" style="display: none;">Valider</button>
+            </div>
 
-        <div>
-            <p>Date de naissance :</p>
-            <input type="text" value="<?php echo htmlspecialchars(date('d/m/Y', strtotime($userData['date_naissance']))); ?>" disabled>
-            <button type="button">
-                <span>&#9998</span> Modifier
-            </button>
-        </div>
-        
-        <div>
-            <p>Adresse email :</p>
-            <input type="email" value="<?php echo htmlspecialchars($userData['email']); ?>" disabled>
-            <button type="button">
-                <span>&#9998</span>Modifier
-            </button>
-        </div>
+            <div>
+                <p>Date de naissance :</p>
+                <input type="date" name="date_naissance" value="<?= htmlspecialchars($userData['date_naissance']); ?>" disabled>
+                <button type="button" class="edit-btn">Modifier</button>
+                <button type="button" class="cancel-btn" style="display: none;">Annuler</button>
+                <button type="button" class="save-btn" style="display: none;">Valider</button>
+            </div>
+            
+            <div>
+                <p>Adresse email :</p>
+                <input type="email" name="email" value="<?= htmlspecialchars($userData['email']); ?>" disabled>
+                <button type="button" class="edit-btn">Modifier</button>
+                <button type="button" class="cancel-btn" style="display: none;">Annuler</button>
+                <button type="button" class="save-btn" style="display: none;">Valider</button>
+            </div>
 
-        <div>
-            <p>Mot de passe :</p>
-            <input type="password" value="********" disabled>
-            <button type="button">
-                <span>&#9998</span>Modifier
-            </button>
-        </div>
+            <div>
+                <p>Mot de passe :</p>
+                <input type="password" name="mot_de_passe" value="********" disabled>
+                <button type="button" class="edit-btn">Modifier</button>
+                <button type="button" class="cancel-btn" style="display: none;">Annuler</button>
+                <button type="button" class="save-btn" style="display: none;">Valider</button>
+            </div>
+
+            <button type="submit" id="submit-btn" style="display: none;">Soumettre</button>
+        </form>
     </div>
     
     <p>Réservations</p>
@@ -136,5 +140,8 @@ $reservations = $userData['reservations'] ?? [];
         <a href="admin.php">Administration</a>
         <p>Contact : CY Tech</p>
     </footer>
-</body>
+    
+    <script src="js/profil.js"></script>
+</body> 
+
 </html>

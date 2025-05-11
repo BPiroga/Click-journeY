@@ -67,4 +67,40 @@ function isOfferInPanier($offreId) {
 
     return false;
 }
+
+// Fonction pour mettre à jour le profil utilisateur
+function updateUserProfile($email, $newData) {
+    $usersFile = '../data/users.json';
+    $usersData = json_decode(file_get_contents($usersFile), true);
+
+    foreach ($usersData['users'] as &$user) {
+        if ($user['email'] === $email) {
+            foreach ($newData as $key => $value) {
+                if (isset($user[$key])) {
+                    $user[$key] = $value; // Mettre à jour les données
+                }
+            }
+            file_put_contents($usersFile, json_encode($usersData, JSON_PRETTY_PRINT));
+            return true;
+        }
+    }
+    return false;
+}
+
+// Exemple d'utilisation (à appeler depuis un formulaire)
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
+    $newData = [
+        'prenom' => $_POST['prenom'] ?? '',
+        'nom' => $_POST['nom'] ?? '',
+        'date_naissance' => $_POST['date_naissance'] ?? ''
+    ];
+    $email = $_SESSION['email'] ?? '';
+    if ($email && updateUserProfile($email, $newData)) {
+        header('Location: profil.php?update=success');
+        exit();
+    } else {
+        header('Location: profil.php?update=error');
+        exit();
+    }
+}
 ?>

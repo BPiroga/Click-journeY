@@ -90,11 +90,11 @@ $filteredOffres = array_filter($offres, function ($offre) use ($ville, $type, $p
             <?php else: ?>
                 <?php foreach ($filteredOffres as $offre): ?>
                     <div class="voyage-card">
-                        <a href="offres/offre<?= $offre['id'] ?>.php">
-                            <img src="<?= $offre['image'] ?>" alt="<?= htmlspecialchars($offre['titre']) ?>">
+                        <a href="offres/offre<?= htmlspecialchars($offre['id'] ?? '') ?>.php">
+                            <img src="<?= htmlspecialchars($offre['image'] ?? 'src/default.jpg') ?>" alt="<?= htmlspecialchars($offre['titre'] ?? 'Offre') ?>">
                         </a>
-                        <h3><?= htmlspecialchars($offre['titre']) ?></h3>
-                        <p><?= $offre['duree'] ?> jours - À partir de <?= $offre['prix'] ?>€</p>
+                        <h3><?= htmlspecialchars($offre['titre'] ?? 'Titre non disponible') ?></h3>
+                        <p><?= htmlspecialchars($offre['duree'] ?? '0') ?> jours - À partir de <?= htmlspecialchars($offre['prix'] ?? '0') ?>€</p>
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>

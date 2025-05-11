@@ -1,9 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
+    if (!form) {
+        console.error("Formulaire introuvable.");
+        return;
+    }
+
     const emailInput = form.querySelector("input[name='email']");
     const passwordInput = form.querySelector("input[name='code']");
     const togglePassword = form.querySelector(".toggle-password");
     const passwordCounter = form.querySelector(".password-counter");
+
+    if (!emailInput || !passwordInput || !togglePassword || !passwordCounter) {
+        console.error("Un ou plusieurs éléments nécessaires sont introuvables.");
+        return;
+    }
 
     form.addEventListener("submit", (e) => {
         let isValid = true;
