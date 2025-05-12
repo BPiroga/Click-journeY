@@ -79,7 +79,6 @@
     <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function () {
         const submit_boutton = document.getElementById("submit");
-        const select_date = document.getElementById("date");
         const select_ville = document.getElementById("ville");
         const select_type = document.getElementById("type");
         const select_prix = document.getElementById("prix_max");
@@ -90,7 +89,7 @@
 
         submit_boutton.addEventListener("click", () => {
             console.log("clic");
-            const date_choisie = select_date.value; 
+
             const ville_choisie = select_ville.value;
             const type_choisie = select_type.value; 
             const prix_choisie = select_prix.value;
@@ -101,7 +100,6 @@
                 .then(response => response.json())
                 .then(data => {
                     const resultats = data.filter(offre =>
-                    //(date_choisie === "" || offre.date.toLowerCase() === date_choisie.toLowerCase())&&
                     (ville_choisie === "" || offre.ville.toLowerCase() === ville_choisie.toLowerCase())&&
                     (type_choisie === "" || offre.type.toLowerCase() === type_choisie.toLowerCase())&&
                     (prix_choisie === "" || offre.prix <= parseFloat(prix_choisie))&&
