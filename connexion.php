@@ -104,6 +104,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a href="admin.php">Administration</a>
         <p>Contact : CY Tech</p>
     </footer>
-    <script src="connexion.js"></script> 
+    <script src="js/connexion.js"></script> 
 </body>
 </html>
