@@ -81,7 +81,7 @@ $reservations = $userData['reservations'] ?? [];
         <div>
             <p>Nom :</p>
             <input type="text" value="<?php echo htmlspecialchars($userData['nom']); ?>" disabled>
-            <button type="button">
+            <button type="button" >
                 <span>&#9998</span> Modifier
             </button>
         </div>
