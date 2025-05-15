@@ -1,37 +1,5 @@
-<?php
-require_once 'php/session_outils.php';
+<?php require_once 'php/session_outils.php';?>
 
-$offresFile = 'data/offres.json';
-$offres = json_decode(file_get_contents($offresFile), true);
-
-// Récupération des critères de recherche
-$ville = isset($_GET['ville']) ? $_GET['ville'] : '';
-$type = isset($_GET['type']) ? $_GET['type'] : '';
-$prixMax = isset($_GET['prix_max']) ? (int)$_GET['prix_max'] : null;
-$dureeMin = isset($_GET['duree_min']) ? (int)$_GET['duree_min'] : null;
-
-// Extraction des options uniques depuis le fichier offres.json
-$options = [];
-foreach ($offres as $offre) {
-    if (isset($offre['options'])) {
-        $options = array_merge($options, $offre['options']);
-    }
-}
-$options = array_unique($options); // Supprime les doublons
-
-// Récupération des options sélectionnées
-$selectedOptions = isset($_GET['options']) ? $_GET['options'] : [];
-
-// Filtrage des offres en fonction des critères
-$filteredOffres = array_filter($offres, function ($offre) use ($ville, $type, $prixMax, $dureeMin, $selectedOptions) {
-    $matchesOptions = empty($selectedOptions) || (isset($offre['options']) && !array_diff($selectedOptions, $offre['options']));
-    return (!$ville || $offre['ville'] === $ville) &&
-           (!$type || $offre['type'] === $type) &&
-           (!$prixMax || $offre['prix'] <= $prixMax) &&
-           (!$dureeMin || $offre['duree'] >= $dureeMin) &&
-           $matchesOptions;
-});
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -49,39 +17,58 @@ $filteredOffres = array_filter($offres, function ($offre) use ($ville, $type, $p
         </button>
         <div class="navlinks">
             <a href="presentation.php">Présentation</a>
-            <a href="recherche.php">Recherche</a>
+            <a href="teste.php">Recherche</a>
             <?php renderAuthLinks($isLoggedIn); ?>
         </div>
     </header>
+
     <div class="container-recherche">
-        <form class="filters" method="get" action="recherche.php">
-            <input type="date" name="date" placeholder="jj/mm/aaaa">
-            <select name="ville">
+        <div class="filters">
+            <input type="date" name="date" id="date" placeholder="jj/mm/aaaa">
+            <select name="ville" id="ville">
                 <option value="">Choisissez une ville</option>
-                <option value="Lisbonne" <?= $ville === 'Lisbonne' ? 'selected' : '' ?>>Lisbonne</option>
-                <option value="Porto" <?= $ville === 'Porto' ? 'selected' : '' ?>>Porto</option>
-                <option value="Douro" <?= $ville === 'Douro' ? 'selected' : '' ?>>Douro</option>
-                <option value="Algarve" <?= $ville === 'Algarve' ? 'selected' : '' ?>>Algarve</option>
+                <option value="Lisbonne">Lisbonne</option>
+                <option value="Porto">Porto</option>
+                <option value="Douro">Douro</option>
+                <option value="Algarve">Algarve</option>
+                <option value="Madère">Madère</option>
+                <option value="Alentejo">Alentejo</option>
+                <option value="Sintra">Sintra</option>
+                <option value="Faro">Faro</option>
+
             </select>
-            <select name="type">
+            <select name="type" id="type">
                 <option value="">Type d'expérience</option>
-                <option value="Vins" <?= $type === 'Vins' ? 'selected' : '' ?>>Vins</option>
-                <option value="Street Food" <?= $type === 'Street Food' ? 'selected' : '' ?>>Street Food</option>
-                <option value="Gastronomie" <?= $type === 'Gastronomie' ? 'selected' : '' ?>>Gastronomie</option>
-                <option value="Pâtisseries" <?= $type === 'Pâtisseries' ? 'selected' : '' ?>>Pâtisseries</option>
+                <option value="Vins" >Vins</option>
+                <option value="Street Food">Street Food</option>
+                <option value="Gastronomie">Gastronomie</option>
+                <option value="Pâtisseries">Pâtisseries</option>
             </select>
-            <input type="number" name="prix_max" placeholder="Prix max (€)" min="0" value="<?= htmlspecialchars($prixMax) ?>">
-            <input type="number" name="duree_min" placeholder="Durée min (jours)" min="0" value="<?= htmlspecialchars($dureeMin) ?>">
+            <input type="number" id="prix_max" placeholder="Prix max (€)" min="0">
+            <input type="number" id="duree_min" placeholder="Durée min (jours)" min="0">
             <div class="options">
                 <details class="options-details">
                     <summary class="options-btn">Options</summary>
-                    <?php foreach ($options as $option): ?>
                         <label>
-                            <input type="checkbox" name="options[]" value="<?= htmlspecialchars($option) ?>" 
-                                <?= in_array($option, $selectedOptions) ? 'checked' : '' ?>>
-                            <?= htmlspecialchars($option) ?>
+                            <input type="checkbox" id="option_bagage" name="options"value="Bagage inclus">
+                            Bagage inclus
                         </label>
-                    <?php endforeach; ?>
+                        <label>
+                            <input type="checkbox" id="option_annulation" name="options" value="Annulation gratuite">
+                            Annulation gratuite
+                        </label>
+                        <label>
+                            <input type="checkbox" id="option_animaux" name="options" value="Animaux autorisés">
+                            Animaux autorisés
+                        </label>
+                        <label>
+                            <input type="checkbox" id="option_enfants" name="options" value="Voyager avec des enfants">
+                            Voyager avec des enfants
+                        </label>
+                        <label>
+                            <input type="checkbox" id="option_vue_mer" name="options" value="Vue sur la mer">
+                            Vue sur la mer
+                        </label>
                 </details>
             </div>
             <button type="submit">Rechercher</button>
@@ -101,6 +88,10 @@ $filteredOffres = array_filter($offres, function ($offre) use ($ville, $type, $p
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
+            <button type="button" id="submit">Rechercher</button>
+        </div>
+        <div id="voyages" class="voyages">
+
         </div>
     </div>
     <footer>
@@ -110,5 +101,6 @@ $filteredOffres = array_filter($offres, function ($offre) use ($ville, $type, $p
         <p>Contact : CY Tech</p>
     </footer>
     <script src="js/theme-mode.js"></script>
+    <script src="javascript/recherche.js"></script>
 </body>
 </html>
