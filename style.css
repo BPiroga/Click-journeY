@@ -405,6 +405,15 @@ footer a {
     text-decoration: underline;
 }
 
+.toggle-password {
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+
+
+
 
 
 /* Profil */
@@ -487,6 +496,38 @@ body>p {
 
 .admin-profils p{
     margin-right: 5%;    
+}
+
+.profil-info button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #034C8C;
+    color: white;
+    transition: 0.3s;
+}
+
+.profil-info button:hover {
+    background-color: #048ABF;
+}
+
+.cancel-btn {
+    background-color: #D9851E;
+}
+
+.cancel-btn:hover {
+    background-color: #794b13;
+}
+
+.save-btn {
+    background-color: #28a745;
+}
+
+.save-btn:hover {
+    background-color: #1e7e34;
 }
 
 

@@ -96,15 +96,21 @@ if (isset($_GET['action']) && isset($_GET['email'])) {
             <a class="button-link-admin" href="profil.php?email=<?php echo urlencode($user['email']); ?>">Voir le profil</a>
             <!-- Lien pour gérer le statut VIP -->
             <?php if ($user['role'] !== 'admin'): ?>
-                <a class="button-link-admin" href="admin.php?action=vip&email=<?php echo urlencode($user['email']); ?>">
+                <button class="button-link-admin vip-button" 
+                        data-action="vip" 
+                        data-email="<?php echo htmlspecialchars($user['email']); ?>" 
+                        onclick="simulateAction(this)">
                     <?php echo $user['role'] === 'vip' ? 'Retirer VIP' : 'Passer VIP'; ?>
-                </a>
+                </button>
             <?php endif; ?>
             <!-- Lien pour gérer le bannissement -->
             <?php if ($user['role'] !== 'admin'): ?>
-                <a class="button-link-admin" href="admin.php?action=ban&email=<?php echo urlencode($user['email']); ?>">
+                <button class="button-link-admin ban-button" 
+                        data-action="ban" 
+                        data-email="<?php echo htmlspecialchars($user['email']); ?>" 
+                        onclick="simulateAction(this)">
                     <?php echo isset($user['ban']) && $user['ban'] ? 'Débannir' : 'Bannir'; ?>
-                </a>
+                </button>
             <?php endif; ?>
         </div>
         <?php endforeach; ?>
@@ -116,5 +122,25 @@ if (isset($_GET['action']) && isset($_GET['email'])) {
         <p>Contact : CY Tech</p>
     </footer>
     <script src="js/theme-mode.js"></script>
+    <script>
+        function simulateAction(button) {
+            // Désactiver le bouton
+            button.disabled = true;
+            button.style.opacity = "0.5";
+
+            // Simuler un délai de 3 secondes
+            setTimeout(() => {
+                // Réactiver le bouton
+                button.disabled = false;
+                button.style.opacity = "1";
+
+                // Envoyer la requête pour mettre à jour les données
+                const action = button.getAttribute('data-action');
+                const email = button.getAttribute('data-email');
+                window.location.href = `admin.php?action=${action}&email=${encodeURIComponent(email)}`;
+            }, 3000); // 3 secondes
+        }
+    </script>
+    <script src="js/admin.js"></script>
 </body>
 </html>
