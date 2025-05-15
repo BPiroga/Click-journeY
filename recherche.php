@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>CY Portugal</title>
-    <script src="javascript/recherche.js" defer></script>
 </head>
 
 <body>
@@ -82,5 +81,6 @@
         <a href="admin.php">Administration</a>
         <p>Contact : CY Tech</p>
     </footer>
+    <script src="javascript/recherche.js"></script>
 </body>
 </html>
