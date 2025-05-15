@@ -19,14 +19,16 @@ if (isset($_GET['add_to_cart']) && $_GET['add_to_cart'] == $offreId) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="../style.css">
     <title>CY Portugal</title>
 </head>
-
-<body>
+<body data-mode="light">
     <header class="navbar">
-        <a class="logo" href="../index.php"><img src="../src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
+        <a class="logo" href="../index.php"><img id="logo-image" src="../src/Logo.png" alt="Logo CY Portugal" width="210px"></a>
         <p class="titre">CY Portugal</p>
+        <button id="toggle-mode" class="button-link-admin">
+            <img id="mode-icon" src="../src/sun.png" alt="Changer de mode" width="24px">
+        </button>
         <div class="navlinks">
             <a href="../presentation.php">Présentation</a>
             <a href="../recherche.php">Recherche</a>
@@ -39,9 +41,9 @@ if (isset($_GET['add_to_cart']) && $_GET['add_to_cart'] == $offreId) {
             <p class="title">Découverte des vins de Porto</p>
             <img src="../src/Vin Porto.jpg" alt="Vin Porto">
             <p>
-                    Partez pour une escapade immersive au cœur des traditions viticoles portugaises et laissez-vous envoûter
-                    par les saveurs de Porto et du Douro ! Entre visites de caves, dégustations de vins d’exception et
-                    paysages à couper le souffle, ce séjour est une invitation à la gourmandise et à la détente.
+                Partez pour une escapade immersive au cœur des traditions viticoles portugaises et laissez-vous envoûter
+                par les saveurs de Porto et du Douro ! Entre visites de caves, dégustations de vins d’exception et
+                paysages à couper le souffle, ce séjour est une invitation à la gourmandise et à la détente.
             </p>
         </div>
 
@@ -96,5 +98,6 @@ if (isset($_GET['add_to_cart']) && $_GET['add_to_cart'] == $offreId) {
         <a href="../admin.php">Administration</a>
         <p>Contact : CY Tech</p>
     </footer>
+    <script src="../js/theme-mode.js"></script>
 </body>
 </html>

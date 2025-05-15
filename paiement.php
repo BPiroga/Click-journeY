@@ -1,5 +1,5 @@
 <?php
-require('getapikey.php');
+require('php/getapikey.php');
 
 session_start(); // Démarrer la session pour accéder aux informations utilisateur
 
@@ -56,13 +56,16 @@ $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur .
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="style.css">
     <title>CY Portugal</title>
 </head>
-<body>
+<body data-mode="light">
     <header class="navbar">
-        <a class="logo" href="index.php"><img src="src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
+        <a class="logo" href="index.php"><img id="logo-image" src="src/Logo.png" alt="Logo CY Portugal" width="210px"></a>
         <p class="titre">CY Portugal</p>
+        <button id="toggle-mode" class="button-link-admin">
+            <img id="mode-icon" src="src/sun.png" alt="Changer de mode" width="24px">
+        </button>
         <div class="navlinks">
             <a href="presentation.php">Présentation</a>
             <a href="recherche.php">Recherche</a>
@@ -93,5 +96,6 @@ $control = md5($api_key . "#" . $transaction . "#" . $montant . "#" . $vendeur .
             </form>
         </div>
     </div>
+    <script src="js/theme-mode.js"></script>
 </body>
 </html>

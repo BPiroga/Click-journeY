@@ -53,13 +53,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-dark.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="style.css">
     <title>CY Portugal</title>
 </head>
-<body>
+<body data-mode="light">
     <header class="navbar">
-        <a class="logo" href="index.php"><img src="src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
+        <a class="logo" href="index.php"><img id="logo-image" src="src/Logo.png" alt="Logo CY Portugal" width="210px"></a>
         <p class="titre">CY Portugal</p>
+        <button id="toggle-mode" class="button-link-admin">
+            <img id="mode-icon" src="src/sun.png" alt="Changer de mode" width="24px">
+        </button>
     </header>
     <div class="container">
         <div class="connexion">
@@ -100,5 +103,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a href="admin.php">Administration</a>
         <p>Contact : CY Tech</p>
     </footer>
+    <script src="js/theme-mode.js"></script>
 </body>
 </html>

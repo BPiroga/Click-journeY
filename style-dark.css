@@ -58,6 +58,7 @@ footer a {
     font-style: italic;
     font-weight: bold;
     letter-spacing: 4px;
+    margin-right: 5px;
 }
 
 .navlinks {
@@ -67,10 +68,10 @@ footer a {
 
 .navlinks a {
     text-decoration: none;
-    margin: 0 5% 0 5%;
+    margin: 0 2% 0 2%;
     color: #e0e0e0; /* Light text */
     border: 3px solid #D9851E;
-    padding: 8px;
+    padding: 5px;
     background-color: #333333; /* Darker background */
     border-radius: 8px;
     transition: 0.3s;

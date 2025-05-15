@@ -56,13 +56,16 @@ if (isset($_GET['action']) && isset($_GET['email'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-dark.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="style.css">
     <title>CY Portugal</title>
 </head>
-<body>
+<body data-mode="light">
     <header class="navbar">
-        <a class="logo" href="index.php"><img src="src/Logo CY Portugal.png" alt="Logo CY Portugal" width="210px"></a>
+        <a class="logo" href="index.php"><img id="logo-image" src="src/Logo.png" alt="Logo CY Portugal" width="210px"></a>
         <p class="titre">CY Portugal</p>
+        <button id="toggle-mode" class="button-link-admin">
+            <img id="mode-icon" src="src/sun.png" alt="Changer de mode" width="24px">
+        </button>
         <div class="navlinks">
             <a href="presentation.php">Présentation</a>
             <a href="recherche.php">Recherche</a>
@@ -78,15 +81,15 @@ if (isset($_GET['action']) && isset($_GET['email'])) {
             <div>
                 <div>
                     <p>Prénom :</p>
-                    <input type="text" value="<?php echo htmlspecialchars($user['prenom']); ?>" style="color: <?php echo isset($user['ban']) && $user['ban'] ? 'red' : 'black'; ?>;" disabled>
+                    <input type="text" value="<?php echo htmlspecialchars($user['prenom']); ?>" style="color: <?php echo isset($user['ban']) && $user['ban'] ? 'red' : 'inherit'; ?>;" disabled>
                 </div>
                 <div>
                     <p>Nom :</p>
-                    <input type="text" value="<?php echo htmlspecialchars($user['nom']); ?>" style="color: <?php echo isset($user['ban']) && $user['ban'] ? 'red' : 'black'; ?>;" disabled>
+                    <input type="text" value="<?php echo htmlspecialchars($user['nom']); ?>" style="color: <?php echo isset($user['ban']) && $user['ban'] ? 'red' : 'inherit'; ?>;" disabled>
                 </div>
                 <div>
                     <p>Rôle :</p>
-                    <input type="text" value="<?php echo htmlspecialchars($user['role']); ?>" style="color: <?php echo isset($user['ban']) && $user['ban'] ? 'red' : 'black'; ?>;" disabled>
+                    <input type="text" value="<?php echo htmlspecialchars($user['role']); ?>" style="color: <?php echo isset($user['ban']) && $user['ban'] ? 'red' : 'inherit'; ?>;" disabled>
                 </div>
             </div>
             <!-- Lien pour voir le profil de l'utilisateur -->
@@ -112,5 +115,6 @@ if (isset($_GET['action']) && isset($_GET['email'])) {
         <a href="admin.php">Administration</a>
         <p>Contact : CY Tech</p>
     </footer>
+    <script src="js/theme-mode.js"></script>
 </body>
 </html>
