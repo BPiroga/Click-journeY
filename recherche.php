@@ -1,5 +1,5 @@
 <?php require_once 'php/session_outils.php';?>
- 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -71,25 +71,9 @@
                         </label>
                 </details>
             </div>
-            <button type="submit">Rechercher</button>
-        </form>
-
-        <div class="voyages">
-            <?php if (empty($filteredOffres)): ?>
-                <p>Aucune offre ne correspond à vos critères.</p>
-            <?php else: ?>
-                <?php foreach ($filteredOffres as $offre): ?>
-                    <div class="voyage-card">
-                        <a href="offres/offre<?= htmlspecialchars($offre['id'] ?? '') ?>.php">
-                            <img src="<?= htmlspecialchars($offre['image'] ?? 'src/default.jpg') ?>" alt="<?= htmlspecialchars($offre['titre'] ?? 'Offre') ?>">
-                        </a>
-                        <h3><?= htmlspecialchars($offre['titre'] ?? 'Titre non disponible') ?></h3>
-                        <p><?= htmlspecialchars($offre['duree'] ?? '0') ?> jours - À partir de <?= htmlspecialchars($offre['prix'] ?? '0') ?>€</p>
-                    </div>
-                <?php endforeach; ?>
-            <?php endif; ?>
             <button type="button" id="submit">Rechercher</button>
         </div>
+        
         <div id="voyages" class="voyages">
 
         </div>
@@ -101,6 +85,6 @@
         <p>Contact : CY Tech</p>
     </footer>
     <script src="js/theme-mode.js"></script>
-    <script src="javascript/recherche.js"></script>
+    <script src="js/recherche.js"></script>
 </body>
 </html>
