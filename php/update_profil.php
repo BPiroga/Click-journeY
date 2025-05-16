@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-$jsonFile = 'data/users.json';
+$jsonFile = '../data/users.json';
 
 // Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['email'])) {
-    header('Location: connexion.php');
+    header('Location: ../connexion.php');
     exit();
 }
 
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Sauvegarder les modifications dans le fichier JSON
     if (file_put_contents($jsonFile, json_encode($users, JSON_PRETTY_PRINT))) {
         $_SESSION['email'] = $users['users'][$userIndex]['email']; // Mettre à jour l'email dans la session si modifié
-        header('Location: profil.php'); // Rediriger vers le profil mis à jour
+        header('Location: ../profil.php'); // Rediriger vers le profil mis à jour
         exit();
     } else {
         die('Erreur lors de la sauvegarde des données.');
