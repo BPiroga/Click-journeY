@@ -66,7 +66,7 @@ $reservations = $userData['reservations'] ?? [];
             <?php echo (isset($userData['role']) && $userData['role'] === 'vip') ? 'Information profil VIP' : 'Information profil'; ?>
         </p>
 
-        <form id="profil-form" method="post" action="php/update_profil_test.php">
+        <form id="profil-form" method="post" action="php/update_profil.php">
             <div>
                 <p>Prénom :</p>
                 <input type="text" name="prenom" value="<?= htmlspecialchars($userData['prenom'] ?? '') ?>" disabled>
@@ -136,7 +136,7 @@ $reservations = $userData['reservations'] ?? [];
         <p>Contact : CY Tech</p>
     </footer>
 
-    <script src="js/profil_test.js"></script>
+    <script src="js/profil.js"></script>
     <script src="js/theme-mode.js"></script>
 </body>
 </html>

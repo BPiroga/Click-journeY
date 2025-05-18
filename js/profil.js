@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             input.disabled = false;
         });
         const formData = new FormData(form);
-        fetch('php/update_profil_test.php', {
+        fetch('php/update_profil.php', {
             method: 'POST',
             body: formData
         })
