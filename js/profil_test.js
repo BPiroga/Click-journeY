@@ -1,10 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
+    
+    const passwordInput = document.getElementById("passwordInput");
+    const togglePassword = document.getElementById("togglePassword");
+    if (passwordInput && togglePassword) {
+        togglePassword.addEventListener("click", () => {
+            const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+            passwordInput.setAttribute("type", type);
+            togglePassword.textContent = type === "password" ? "👁️" : "🙈";
+        });
+    }
 
-    // togglePassword.addEventListener("click", () => {
-    //     const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-    //     passwordInput.setAttribute("type", type);
-    //     togglePassword.textContent = type === "password" ? "👁️" : "🙈";
-    // });
     const form = document.getElementById("profil-form");
     const submitBtn = document.getElementById("submit-btn");
 

@@ -29,7 +29,9 @@ if (file_exists($jsonFile)) {
         }
     }
 }
-
+$offres = json_decode(file_get_contents($offresFile), true);
+$panier = $userData['panier'] ?? [];
+$reservations = $userData['reservations'] ?? [];
 
 ?>
 
@@ -96,16 +98,36 @@ if (file_exists($jsonFile)) {
             </div>
             <div>
                 <p>Mot de passe :</p>
-                <input type="password" name="mot_de_passe" value="<?= htmlspecialchars($userData['mot_de_passe'] ?? '') ?>" disabled>
-                <span class="toggle-password">👁️</span>
-                <span class="password-counter">0/20</span>
+                <input type="password" name="mot_de_passe" value="<?= htmlspecialchars($userData['mot_de_passe'] ?? '') ?>" id="passwordInput"disabled>
                 <button type="button" class="edit-btn">Modifier</button>
                 <button type="button" class="cancel-btn" style="display: none;">Annuler</button>
                 <button type="button" class="save-btn" style="display: none;">Valider</button>
+                <span id="togglePassword" style="cursor:pointer; margin-left:10px;">👁️</span>
             </div>
             <button type="submit" id="submit-btn" style="display:none;">Soumettre</button>
         </form>
     </div>
+    <p>Réservations</p>
+    <div class="profil-reservation">
+        <div class="offres">
+            <?php foreach ($offres as $offre): ?>
+                <?php if (in_array($offre['id'], $panier)): ?>
+                    <div>
+                        <img class="offre-image" src="<?= htmlspecialchars($offre['image']) ?>" alt="<?= htmlspecialchars($offre['titre']) ?>">
+                        <a class="button-offres" href="paiement.php?id=<?= $offre['id'] ?>"><?= htmlspecialchars($offre['prix']) ?> €</a>
+                    </div>
+                <?php endif; ?>
+                <?php if (in_array($offre['id'], $reservations)): ?>
+                    <div>
+                        <img class="offre-image" src="<?= htmlspecialchars($offre['image']) ?>" alt="<?= htmlspecialchars($offre['titre']) ?>">
+                        <a class="button-offres" href="offres/offre<?= $offre['id'] ?>.php">Réservé</a>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </div>    
+    </div>
+    
+    
     
     <footer>
         <p>&copy; 2025 CY Portugal</p>

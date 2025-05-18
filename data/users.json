@@ -2,10 +2,10 @@
     "users": {
         "0": {
             "prenom": "Jeane",
-            "nom": "Dupont",
+            "nom": "Duponte",
             "date_naissance": "1990-01-02",
-            "email": "jean.dupont@examplee.com",
-            "mot_de_passe": "password_123e",
+            "email": "jean.dupont@example.com",
+            "mot_de_passe": "password_123",
             "role": "admin",
             "ban": false,
             "panier": [
