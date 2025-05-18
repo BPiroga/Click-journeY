@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // togglePassword.addEventListener("click", () => {
+    //     const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+    //     passwordInput.setAttribute("type", type);
+    //     togglePassword.textContent = type === "password" ? "👁️" : "🙈";
+    // });
     const form = document.getElementById("profil-form");
     const submitBtn = document.getElementById("submit-btn");
 
@@ -18,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cancelBtn.style.display = "inline-block"; // On affiche "Annuler"
             saveBtn.style.display = "inline-block";   // On affiche "Valider"
         });
-
+        
         cancelBtn.addEventListener("click", () => {
             input.value = input.dataset.originalValue; // On remet la valeur d'origine
             input.disabled = true;                    // On ré-désactive le champ
@@ -36,15 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
             submitBtn.style.display = "block";         // On affiche le bouton "Soumettre" pour enregistrer
         });
     });
-
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         form.querySelectorAll("input").forEach((input) => {
             input.disabled = false;
         });
         const formData = new FormData(form);
-
-        fetch('update_profil.php', {
+        fetch('php/update_profil_test.php', {
             method: 'POST',
             body: formData
         })
@@ -77,5 +80,4 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
-
 });

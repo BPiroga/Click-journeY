@@ -1,11 +1,11 @@
 {
-    "users": [
-        {
-            "prenom": "Jean",
+    "users": {
+        "0": {
+            "prenom": "Jeane",
             "nom": "Dupont",
-            "date_naissance": "1990-01-01",
-            "email": "jean.dupont@example.com",
-            "mot_de_passe": "password_123",
+            "date_naissance": "1990-01-02",
+            "email": "jean.dupont@examplee.com",
+            "mot_de_passe": "password_123e",
             "role": "admin",
             "ban": false,
             "panier": [
@@ -18,7 +18,7 @@
                 4
             ]
         },
-        {
+        "1": {
             "prenom": "Marie",
             "nom": "Durand",
             "date_naissance": "1985-05-15",
@@ -42,7 +42,7 @@
                 "13"
             ]
         },
-        {
+        "2": {
             "prenom": "Alice",
             "nom": "Martin",
             "date_naissance": "1975-06-15",
@@ -52,6 +52,12 @@
             "ban": true,
             "panier": [],
             "reservations": []
-        }
-    ]
+        },
+        "": {
+            "prenom": "Jeane",
+            "email": null
+        },
+        "prenom": "Jeane",
+        "email": null
+    }
 }

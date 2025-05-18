@@ -64,7 +64,7 @@ if (file_exists($jsonFile)) {
             <?php echo (isset($userData['role']) && $userData['role'] === 'vip') ? 'Information profil VIP' : 'Information profil'; ?>
         </p>
 
-        <form id="profil-form" method="post" action="php/update_profil.php">
+        <form id="profil-form" method="post" action="php/update_profil_test.php">
             <div>
                 <p>Prénom :</p>
                 <input type="text" name="prenom" value="<?= htmlspecialchars($userData['prenom'] ?? '') ?>" disabled>
@@ -80,7 +80,29 @@ if (file_exists($jsonFile)) {
                 <button type="button" class="cancel-btn" style="display: none;">Annuler</button>
                 <button type="button" class="save-btn" style="display: none;">Valider</button>
             </div>
-            
+            <div>
+                <p>Date de naissance :</p>
+                <input type="date" name="date_naissance" value="<?= htmlspecialchars($userData['date_naissance'] ?? '') ?>" disabled>
+                <button type="button" class="edit-btn">Modifier</button>
+                <button type="button" class="cancel-btn" style="display: none;">Annuler</button>
+                <button type="button" class="save-btn" style="display: none;">Valider</button>
+            </div>
+            <div>
+                <p>Adresse email :</p>
+                <input type="email" name="email" value="<?= htmlspecialchars($userData['email'] ?? '') ?>" disabled>
+                <button type="button" class="edit-btn">Modifier</button>
+                <button type="button" class="cancel-btn" style="display: none;">Annuler</button>
+                <button type="button" class="save-btn" style="display: none;">Valider</button>
+            </div>
+            <div>
+                <p>Mot de passe :</p>
+                <input type="password" name="mot_de_passe" value="<?= htmlspecialchars($userData['mot_de_passe'] ?? '') ?>" disabled>
+                <span class="toggle-password">👁️</span>
+                <span class="password-counter">0/20</span>
+                <button type="button" class="edit-btn">Modifier</button>
+                <button type="button" class="cancel-btn" style="display: none;">Annuler</button>
+                <button type="button" class="save-btn" style="display: none;">Valider</button>
+            </div>
             <button type="submit" id="submit-btn" style="display:none;">Soumettre</button>
         </form>
     </div>
